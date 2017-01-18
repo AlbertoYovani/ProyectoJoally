@@ -2,7 +2,7 @@
 
 function conexion()
     {
-        if(!($link=mysql_connect("localhost","root","1")))
+        if(!($link=mysql_connect("192.168.1.82","root","1")))
             {
                echo '<script>alert("Error al conectarse"); </script>';
             }

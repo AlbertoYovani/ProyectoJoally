@@ -6,7 +6,7 @@ include '../conexion.php';
     $telefono=$_POST['telefono'];
     $fechanac=$_POST['fechanac'];
     $usuario=$_POST['usuario'];
-    $contrasenia=$_POST['contrasenia'];
+    $contrasenia=$_POST['ClPassword'];
     
     $insert = mysqli_query(conexion(), 
             "INSERT INTO cliente (

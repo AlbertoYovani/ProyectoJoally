@@ -63,14 +63,14 @@
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-unlock-alt color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Contraseña" name="contrasenia" type="password" >
+                                                    <input class="form-control" placeholder="Contraseña" name="ClPassword" type="password" >
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-unlock-alt color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Confirmar Contraseña" name="confcontrasenia" type="password" > <!--  required="" maxlength="20" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,20}" -->
+                                                    <input class="form-control" placeholder="Confirmar Contraseña" name="ClPasswordConf" type="password" > 
                                                 </div>
                                                 
                                                 <div class="input-group">
