@@ -1,0 +1,37 @@
+create database joally;
+use joally;
+
+create table categoria(id int not null auto_increment, nombre varchar(50) not null
+	, primary key categoria(id))engine=innodb;
+
+create table arreglo(id int not null auto_increment, nombre varchar(60) not null
+	,precio double not null, tamaño varchar(30) not null, idCa int
+	not null, cantidad int not null, primary key venta(id),
+	descripcion varchar(255), 
+	foreign key (idCa) references categoria(id) )engine=innodb;
+
+create table cliente(id int not null auto_increment, nombre varchar(60) not null,
+	direccion varchar(60) not null, telefono varchar(15) not null, correo
+	varchar(60), fechaNac date not null, primary key cliente(id))engine=innodb;
+
+create table venta(id int not null auto_increment,idA int not null, idC int not null,
+	fecha date not null, total double not null, 
+	primary key venta(id),
+	foreign key (idA) references arreglo(id), foreign key (idC)
+	references cliente(id) on delete cascade)engine=innodb;
+
+create table compra(id int not null auto_increment, insumos varchar(255)not null, 
+	fecha date not null, inversion double not null, descripcion varchar(255)
+	not null, primary key compra(id))engine=innodb;
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(60) NOT NULL,
+  `domicilio` varchar(60) NOT NULL,
+  `telefono` varchar(15) NOT NULL,
+  `puesto` varchar(60) NOT NULL,
+  `contrasenia` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+INSERT INTO usuario VALUES(0,'edgar','barrio norte','9191623454','vendedor','123');

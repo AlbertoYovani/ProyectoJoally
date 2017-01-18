@@ -1,0 +1,14 @@
+.col-centered{
+    float: none;
+    margin: auto;
+}
+.back-vt{
+    background-color: #E01017 !important;
+}
+.color-white{
+    color: white !important;
+}
+.miborder{
+    border-radius: 20px !important;
+    background-color: #E6E6E6;
+}
