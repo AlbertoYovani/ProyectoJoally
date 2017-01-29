@@ -173,11 +173,18 @@
 	-moz-user-select: none;
 	-o-user-select: none;
 }
+/* Define el estilo del div que se extiende al pasar el cursor sobre el mñequito de logueo y el cierre de sesión*/
 .flat-mega-menu .login-form ul {
 	position: absolute;
 	right: 0px;
 	width: 300px;
 	padding: 15px 15px 10px;
+}
+#cerrar{
+        position: absolute !important;
+	right: 0px !important;
+	width: 168px !important;
+	padding: 15px 15px 10px !important;
 }
 /*Hover del muñequito de logueo*/
 .flat-mega-menu .login-form:hover{
@@ -201,8 +208,9 @@
 	margin-left: 20px;
 	border-left: 1px solid #dedede;
 }
+/*Define el hover cuando pasamos el corsor sobre el icono de buscar*/
 .flat-mega-menu .search-bar:hover{
-	background-color: #FFFFFF;
+	background-color: #F78181;
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 	-moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -250,7 +258,7 @@
 	border: 1px solid rgba(0,0,0,0.15);
 	opacity: 0.81;
 	box-shadow: inset 0.5px 0.866px 0px 0px rgba(255, 248, 68, 0.106);
-	color: #00FF00;
+	color: #F2F2F2;/*Define el color de la letra del buscador*/
 }
 .flat-mega-menu .search-bar ul input[type=submit]:hover {
 	opacity: 1;
@@ -876,8 +884,8 @@
 	width: 100%;
 }
 	/* .title class layout */
-	.flat-mega-menu ul .title {
-		padding-left: 0px;
+.flat-mega-menu ul .title {
+padding-left: 0px;
 		
 	}
 }

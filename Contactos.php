@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <?=include'./include/header.php';?>
 
@@ -22,8 +21,8 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row" >
+                    <div class="col-md-8">
 
                         <table class="table table-bordered">
                             <thead>
@@ -34,9 +33,6 @@
                                     <th>
                                         Horarios
                                     </th>
-                                    <th>
-                                        Vendedor
-                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,10 +41,7 @@
                                         Lunes
                                     </td>
                                     <td>
-                                        9:00 a.m. - 01:00 p.m.
-                                    </td>
-                                    <td>
-                                        Otto
+                                        9:00 am - 01:00 pm   y  de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                                 <tr>
@@ -56,10 +49,7 @@
                                         Martes
                                     </td>
                                     <td>
-                                        9:00 a.m. - 01:00 p.m.
-                                    </td>
-                                    <td>
-                                        Thornton
+                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,10 +57,7 @@
                                         Miercoles
                                     </td>
                                     <td>
-                                        9:00 a.m. - 01:00 p.m.
-                                    </td>
-                                    <td>
-                                        the Bird
+                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                                 <tr>
@@ -78,10 +65,7 @@
                                         Jueves
                                     </td>
                                     <td>
-                                        9:00 a.m. - 01:00 p.m.
-                                    </td>
-                                    <td>
-                                        the Bird
+                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                                 <tr>
@@ -89,10 +73,7 @@
                                         Viernes
                                     </td>
                                     <td>
-                                        9:00 a.m. - 01:00 p.m.
-                                    </td>
-                                    <td>
-                                        the Bird
+                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                                 <tr>
@@ -100,10 +81,7 @@
                                         Sabado
                                     </td>
                                     <td>
-
-                                    </td>
-                                    <td>
-                                        the Bird
+                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
                                     </td>
                                 </tr>
                             </tbody>
@@ -120,12 +98,12 @@
                 <br>
                 <div class="row">
                     <!-- Sidebars -->
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <aside>
                             <address>
                                 <strong>Joally Arreglos Frutales</strong><br>
-                              <i class="fa fa-map-marker"></i><strong>Dirección: </strong> fa795 Folsom Ave, Suite 600<br>
-                              <i class="fa fa-plane"></i><strong>Ciudad: </strong>San Francisco, CA 94107<br>
+                              <i class="fa fa-map-marker"></i><strong>Dirección: </strong> Ave. Central, a un costado de la capilla "La Buena Vountad"<br>
+                              <i class="fa fa-plane"></i><strong>Ciudad: </strong>Ocosingo, Chiapas CP 29950<br>
                               <i class="fa fa-phone"></i> <strong title="Phone">Tel: 919 1232346</strong>
                             </address>
 
@@ -134,22 +112,6 @@
                               <i class="fa fa-envelope"></i><strong>Email:</strong><a> jaolly@hotmail.com</a><br>
                             </address>
                         </aside>
-                    </div>
-                    <!-- End Sidebars -->
-
-                    <div class="col-md-8">
-                        <p class="lead">
-                            Para poder  saber tus dudas, sugerencias o peticiones, mandanos un mensaje a nuestro correo electronico, para poder brindarte un mejor servicio.
-                                    
-                        </p>
-                        <form id="form-contact" class="form-theme" action="php/send-mail.php">
-                            <input type="text" placeholder="Nombre Completo" name="Nombre" required="">
-                            <input type="email" placeholder="Email" name="Email" required="">
-                            <input type="number" placeholder="Telefono" name="telefono" required="">
-                            <textarea placeholder="Tu Mensaje" name="mensaje" required=""></textarea>
-                            <input type="submit" name="Submit" value="Enviar Mensaje" class="btn btn-primary">
-                        </form> 
-                        <div id="result"></div>  
                     </div>
                 </div>
             </div>

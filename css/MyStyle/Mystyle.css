@@ -8,7 +8,22 @@
 .color-white{
     color: white !important;
 }
-.miborder{
-    border-radius: 20px !important;
-    background-color: #E6E6E6;
+.perfil{
+    margin-left: 55px;
+}
+.cuenta{
+    text-align: center !important;
+    color: #E01017;
+}
+.ventana_arreglo{
+    width: 80px !important;
+    height: 200px !important;
+}
+.pedido{
+    display: inline-block !important;
+    margin-bottom: 3px !important;
+    margin-top: 3px !important;
+}
+.opc {
+    width: 290px !important;
 }

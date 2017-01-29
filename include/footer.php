@@ -72,6 +72,9 @@
         <script type="text/javascript" src="js/main.js"></script>
         
         <script type="text/javascript" src="js/bootbox.min.js" ></script>
+        <!-- para el perfil -->
+        
+        
         <!-- ======================= End JQuery libs =========================== -->
        
 
@@ -90,6 +93,7 @@
                 });             
             }); //ready
         </script>
+        
         <!--End Slider Function-->
     </body>
 </html>

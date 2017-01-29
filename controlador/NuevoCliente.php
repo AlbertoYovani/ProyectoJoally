@@ -6,17 +6,17 @@ include '../conexion.php';
     $telefono=$_POST['telefono'];
     $fechanac=$_POST['fechanac'];
     $usuario=$_POST['usuario'];
-    $contrasenia=$_POST['ClPassword'];
+    $ClPassword=$_POST['ClPassword'];
     
     $insert = mysqli_query(conexion(), 
-            "INSERT INTO cliente (
+            "INSERT INTO cliente (id,
                                 nombre,
                                 correo,
                                 telefono,
                                 fechanac,
                                 usuario,
-                                contrasenia) 
-                VALUES ('$nombre','$correo','$telefono','$fechanac','$usuario','$contrasenia')");
+                                ClPassword) 
+                VALUES (0,'$nombre','$correo','$telefono','$fechanac','$usuario','$ClPassword')");
     
     if($insert){
         echo json_encode(array(

@@ -116,7 +116,7 @@ select,
 textarea {
   margin: 0;
   font: inherit;
-  color: inherit;
+  color:  #555;         /*Para el color de las letras de la parte del logueo */
 }
 button {
   overflow: visible;
@@ -5691,15 +5691,16 @@ a.list-group-item-danger.active:focus {
   padding: 9px;
   border-radius: 3px;
 }
-.close {
+/*para el color de la X para la ventana emergente*/
+.close {    
   float: right;
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000;
+  color: #fff;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
-  opacity: .2;
+  
 }
 .close:hover,
 .close:focus {

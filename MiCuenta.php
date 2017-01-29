@@ -1,4 +1,4 @@
-<?=include './include/headerR.php';?>
+<?=include './include/headerP.php';?>
 <link href="js/html5imageupload/demo.html5imageupload.css" rel="stylesheet" type="text/css">
 <link href="js/html5imageupload/html5imageupload.css" rel="stylesheet" type="text/css">
 
@@ -13,10 +13,10 @@
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container" >
-                            <h3 class="cuenta">CREAR MI CUENTA</h3>
+                            <h3 class="cuenta">ADMINISTRAR MI CUENTA</h3>  
                             <div class="row">
                                 <!-- Newsletter-->
-                                <div class="col-md-8 col-centered" >
+                                <div class="col-md-8 col-centered" >                                    
                                     <!-- FORMULARIO DE REGISTRO DE UN CLIENTE-->
                                     <br>
                                     <br>

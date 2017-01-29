@@ -133,7 +133,7 @@ ul.single-carousel,
 	opacity: 0.8;
 }
 .btn-primary:hover{
-	color: #01DF01;	
+	color: #FFFEFE;	
 }
 .paddings{
 	padding: 100px 0;
@@ -3373,7 +3373,7 @@ address strong{
 	margin-top: 12px;
 	margin-bottom: 5px;
 	float: left;
-	color: #999;
+	color: #999;            
 	font-size: 0.9rem;
 	height: 35px;
 }
@@ -3560,4 +3560,23 @@ address strong{
 .widget .checkbox label{
 	font-size: 300;
 	font-size: 0.8rem;
+}
+.modal-title{
+    color:white!important;
+    text-align: left!important;
+}
+.modal-header,  .modal-header h4{
+    background: #FF0000 !important;
+    padding: 5px!important;
+    
+}
+.close{
+    color: white !important;
+    font-size:x-large!important;
+}                        
+.modal-title{
+    text-align: center;
+}
+.modal-dialog{
+    margin-top: 90px !important;
 }

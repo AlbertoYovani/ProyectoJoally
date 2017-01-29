@@ -17,12 +17,14 @@
         <!-- Skins Theme -->
         <link href="css/skins/purple/purple.css" rel="stylesheet" type="text/css">
 
+        <link href="css/MyStyle/Mystyle.css" rel="stylesheet" type="text/css">
         <!-- Favicons -->
         <link rel="shortcut icon" href="img/logo_joally.png">
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">  
-
+        
+        
         <!-- Head Libs -->
         <script src="js/modernizr.js"></script>
     </head>
@@ -32,13 +34,6 @@
         <div class="preloader">
             <div class="status">&nbsp;</div>
         </div>
-        <!--End Preloader-->
-    
-        <!-- Theme-options -->
-        
-        <!-- End Theme-options -->       
-
-        <!-- layout-->
         <div id="layout">
             <!-- Header-->
             <header id="header" class="header-v2">
@@ -52,25 +47,24 @@
                     <ul class="collapse"><!-- collapse class for collapse the drop down -->
                         <!-- website title - Logo class -->
                         <li class="title">
-                            <a>  <span>J</span>OALLY ARREGLOS FRUTALES<span></span></a>
+                            <a>  <span>J</span>OALLY ARREGLOS FRUTALES</a>
                         </li>
                         <!-- End website title - Logo class -->
                         <li><a href="index.php">INICIO</a>
                         </li>
                         
-                        <li> <a href="QueBuscas.php">QUE BUSCAS</a>
-                        </li>
-                        
-                        <li> <a href="Horarios.php">HORARIOS</a>
+                        <li> <a href="Nosotros.php">NOSOTROS</a>
                         </li>
                         
                         <li> <a href="Contactos.php">CONTACTOS</a>
                         </li>
                         
+                        <li> <a href="Arreglos.php">ARREGLOS</a>
+                        </li>
                         <li class="login-form"> <i class="fa fa-user"></i><!-- login form -->
                             <ul class="drop-down hover-expand">
                                 <li>
-                                    <form method="POST" action="login.php">
+                                    <form method="POST" action="#">
                                         <table>
                                             <tr>
                                                 <td colspan="2">
@@ -79,11 +73,11 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2"> 
-                                                    <input type="password" required="required" name="contrasenia" placeholder="Contraseña"> 
+                                                    <input type="password" required="required" name="ClPassword" placeholder="Contraseña"> 
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td> <input type="submit" value="Ingresar"> </td>
+                                                <td> <input type="submit" value="Ingresar" onclick="location.href='PrincipalArreglos.php'"> </td>
                                                 <td> 
                                                     <input type="submit" value="Registrar" onclick="location.href='RegistraCliente.php'"> 
                                                 </td>
@@ -106,7 +100,7 @@
                         <!-- SLIDE 01-->
                         <li data-transition="zoomout" data-slotamount="7"  data-masterspeed="1500">
                             <!-- MAIN IMAGE -->
-                            <img src="img/fondoCafe.PNG"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+                            <img src="img/fondoVerde.PNG"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
 
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption medium_text lft stl"
@@ -216,7 +210,7 @@
                         <!-- SLIDE 01-->
                         <li data-transition="zoomout" data-slotamount="7"  data-masterspeed="1500">
                             <!-- MAIN IMAGE -->
-                            <img src="img/fondoGris.PNG"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+                            <img src="img/fondoVerde.PNG"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
 
                            <!-- LAYER NR. 1 -->
                             <div class="tp-caption medium_text lft stl"

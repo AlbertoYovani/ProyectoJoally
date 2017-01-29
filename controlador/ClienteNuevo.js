@@ -3,8 +3,6 @@ $(document).ready(function (){
         e.preventDefault();
         var contra1= $('input[name=ClPassword]').val();
         var contra2= $('input[name=ClPasswordConf]').val();
-        console.log(contra1);
-        console.log(contra2);
         if( contra1 == contra2){
             
             $.ajax({

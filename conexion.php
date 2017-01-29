@@ -1,16 +1,6 @@
 <?php
-
-function conexion()
-    {
-        if(!($link=mysql_connect("192.168.1.82","root","1")))
-            {
-               echo '<script>alert("Error al conectarse"); </script>';
-            }
-        if(!mysql_select_db('joally',$link))
-            {
-                echo '<script>alert("Error al seleccionar la Base de Datos"); </script>';
-            }
-        return $link;
+    function conexion(){
+        return mysqli_connect('localhost', 'root', '1', 'joally');
     }
     
 ?>
