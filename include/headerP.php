@@ -77,7 +77,7 @@
                             <div >
                                 <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
                                 <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">
-                                    <div style="position: absolute;left: 0px;right: 0px;top: -17px;"><b>12</b></div>
+                                    <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>
                             </div>
                             

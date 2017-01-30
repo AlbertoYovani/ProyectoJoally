@@ -57,7 +57,10 @@ $(document).ready(function(){
                     label:'Aceptar',
                     className:'btn btn-primary',
                     callback:function () {
-                        
+                        var cantidad=parseInt($('body input[name=cantidad]').val());
+                        var TotalActual=parseInt($('body .cantidad-productos').text());
+                        var NuevoTotal=(TotalActual+cantidad);
+                        $('body .cantidad-productos').text(NuevoTotal);
                     }
                 }
             }
