@@ -65,15 +65,25 @@
                         
                         <li> <a href="MisPedidos.php">MIS PEDIDOS</a>
                             
-                        <li class="login-form fa fa-user" ><!-- login form -->
+                        <li class="login-form " ><!-- login form -->
+                            <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
                                 <li>
                                     <a href="index.php" style="font-size: 15px; color: #FF0000" >Cerrar Sesión</a> 
                                 </li>
                             </ul>
                         </li>
-                        <li class="login-form fa fa-shopping-cart"></i>
-                        <li class="search-bar"> <i class="fa fa-search"></i><!-- search bar -->
+                        <li class="login-form ">
+                            <div >
+                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px"></i>
+                                <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">
+                                    <div style="    position: absolute;left: 0px;right: 0px;top: -17px;"><b>12</b></div>
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <li class="search-bar"> 
+                            <i class="fa fa-search " style="font-size: 22px;margin-top: 20px"></i><!-- search bar -->
                             <ul class="drop-down hover-expand">
                                 <li>
                                     <form method="post" action="#">
