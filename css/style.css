@@ -41,7 +41,7 @@ html {
 }
 body{
 	font-family: 'Open Sans', sans-serif;
-	color: #727272;
+	color: #A30000 !important;
 	font-size: 1rem;
 	font-weight: lighter;
 	line-height: 1.5rem;
@@ -1959,12 +1959,12 @@ hr.separator:before {
 	margin-top: -60px;
 }
 .footer-v3 .footer-down{
-	background-color: #fff !important;
-	border-top: 1px solid #dedede;
+/*	background-color: #fff !important; */
+/*	border-top: 1px solid #dedede;*/
 }
 .footer-v3 .footer-down{
-	background-color: #fff !important;
-	border-top: 1px solid #dedede;
+/*	background-color: #fff !important;*/
+/*	border-top: 1px solid #dedede; */
 }
 .footer-v3 .img-footer{
 	margin-top: 0;
@@ -3566,7 +3566,7 @@ address strong{
     text-align: left!important;
 }
 .modal-header,  .modal-header h4{
-    background: #FF0000 !important;
+    background: #A30000 !important;
     padding: 5px!important;
     
 }

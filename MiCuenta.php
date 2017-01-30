@@ -13,7 +13,7 @@
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container" >
-                            <h3 class="cuenta">ADMINISTRAR MI CUENTA</h3>  
+                            <h3 class="cuenta" style="color: #843534 !important">ADMINISTRAR MI CUENTA</h3>  
                             <div class="row">
                                 <!-- Newsletter-->
                                 <div class="col-md-8 col-centered" >                                    

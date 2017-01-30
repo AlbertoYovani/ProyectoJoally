@@ -1,5 +1,5 @@
 
-<?=include'./include/header.php';?>
+<?php include'./include/header.php';?>
 
 <div class="content-central">
     <!-- Shadow Semiboxed -->
@@ -17,7 +17,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Horario de servicio</h2><br>
+                        <h2 style="color: #843534 !important">HORARIO DE SERVICIO</h2><br>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                 <hr class="tall"> <!--Para mostrar uuna rayita -->
                 
             <div class="container">
-                <h2>Contactos</h2>
+                <h2 style="color: #843534 !important">CONTACTOS</h2>
                 <br>
                 <div class="row">
                     <!-- Sidebars -->
@@ -109,7 +109,7 @@
 
                             <address>
                               <strong>Joally Emails</strong><br>
-                              <i class="fa fa-envelope"></i><strong>Email:</strong><a> jaolly@hotmail.com</a><br>
+                              <i class="fa fa-envelope"></i><strong>Email:</strong>jaollyFrutas@hotmail.com<br>
                             </address>
                         </aside>
                     </div>
@@ -120,5 +120,5 @@
     <!-- End content info - page Fill with  --> 
 </div>
 
-<?=include'./include/footer.php';?>
+<?php include'./include/footer.php';?>
         

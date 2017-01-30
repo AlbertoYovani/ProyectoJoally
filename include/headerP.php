@@ -69,15 +69,15 @@
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
                                 <li>
-                                    <a href="index.php" style="font-size: 15px; color: #FF0000" >Cerrar Sesión</a> 
+                                    <a href="index.php" style="font-size: 16px; color: #FF0000" >Cerrar Sesión</a> 
                                 </li>
                             </ul>
                         </li>
                         <li class="login-form ">
                             <div >
-                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px"></i>
+                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
                                 <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">
-                                    <div style="    position: absolute;left: 0px;right: 0px;top: -17px;"><b>12</b></div>
+                                    <div style="position: absolute;left: 0px;right: 0px;top: -17px;"><b>12</b></div>
                                 </div>
                             </div>
                             

@@ -1,40 +1,46 @@
-<footer id="footer" class="footer-v3">
-                <div class="container">
-                    <div class="row">         
-                        <div class="col-md-4">
-                            <div class="img-footer">
-                                <img src="img/arreglos-png/FelizdiaEspecial.png" class="img-responsive" alt="img">
-                            </div>
-                        </div>                  
-                        
-                        <div class="col-md-offset-1 col-md-7">
-                            <div class="row">                             
-                                <!-- Social Us-->
-                                <div class="col-md-6">
-                                    <h3>BUSCANOS EN...</h3>
-                                    <ul class="social">
-                                        <li class="facebook"><span><i class="fa fa-facebook"></i></span><a href="https://www.facebook.com/arreglosfrutales.joallyocosingo?fref=ts">Facebook</a></li>
-                                        <li class="twitter"><span><i class="fa fa-twitter"></i></span><a href="#">Twitter</a></li>
-                                    </ul>
-                                </div>
-                            </div>  
-                            <div class="divisor"></div>
-                        </div>
+<footer id="footer" class="footer-v3" style="background:url(img/footer1.jpg); background-size: cover; background-position: center">
+    <div class="container">
+        <div class="row">                  
+            <div class="col-md-offset-1 col-md-11">
+                <div class="row">                             
+                    <!-- Social Us-->
+                    <div class="col-md-6">
+                        <h3 style="color: #ffffff !important">BUSCANOS EN...</h3>
+                        <ul class="social">
+                            <li class="facebook">
+                                <span>
+                                    <i class="fa fa-facebook"></i>
+                                </span>
+                                <a href="https://www.facebook.com/arreglosfrutales.joallyocosingo?fref=ts" style="color: #ffffff !important">Facebook</a>
+                            </li>
+                            <li class="twitter">
+                                <span>
+                                    <i class="fa fa-twitter"></i>
+                                </span>
+                                <a href="#" style="color: #ffffff !important">Twitter</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
-                <!-- footer Down-->
-                <div class="footer-down">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <p>&copy; Arreglos Frutales Joally - Derechos Reservados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- footer Down-->
+                </div>  
+                <div class="divisor"></div>
+            </div>
         </div>
+    </div>
+    <!-- footer Down-->
+    <div class="footer-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p style="color: #ffffff !important"> Arreglos Frutales Joally - Derechos Reservados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</footer>
+</div>
+</div>
+
         <!-- End layout-->
 
         <!-- ======================= JQuery libs =========================== -->
@@ -72,13 +78,9 @@
         <script type="text/javascript" src="js/main.js"></script>
         
         <script type="text/javascript" src="js/bootbox.min.js" ></script>
-        <!-- para el perfil -->
         
+        <script type="text/javascript" src="js/registrarme.js" ></script>
         
-        <!-- ======================= End JQuery libs =========================== -->
-       
-
-        <!--Slider Function-->
         <script type="text/javascript">
             jQuery(document).ready(function() { 
                 jQuery('.tp-banner').show().revolution({
@@ -91,9 +93,7 @@
                     navigationArrows:"solo",
                     navigationStyle:"preview1"
                 });             
-            }); //ready
+            }); 
         </script>
-        
-        <!--End Slider Function-->
     </body>
 </html>

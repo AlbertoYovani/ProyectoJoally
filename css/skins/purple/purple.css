@@ -36,8 +36,8 @@ p.lead .line,
 .filter-header,
 /*Color de la barra del navegador*/
 .filter-header input[type="button"]{ 
-	background-color: #FF0000 !important; 
-        background: #FF3131 !important;
+	background-color: #A30000 !important; 
+        background: #A30000 !important;
 }
 .opacy_bg_03,
 .item-team-01 .info-team,

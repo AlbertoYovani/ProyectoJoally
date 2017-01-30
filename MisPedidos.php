@@ -16,7 +16,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Mis Pedidos</h2><br>
+                        <h2 style="color: #843534 !important">MIS PEDIDOS</h2><br>
                     </div>
                 </div>
 
@@ -94,6 +94,19 @@
                                 </tr>
                             </thead>
                         </table>
+                    </div>
+                </div>
+               <br><br>
+               <div class="row">
+                    <div class="col-md-3">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary fa fa-car" type="submit" name="registrar">  Entrega a domicilio</button>
+                        </span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary fa fa-home" type="button" name="cancelar">  Recoger en sucursal</button>
+                        </span>
                     </div>
                 </div>
             </div>

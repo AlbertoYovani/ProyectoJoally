@@ -1,15 +1,11 @@
-<?=include './include/headerR.php';?>
+<?php include './include/headerR.php';?>
 <link href="js/html5imageupload/demo.html5imageupload.css" rel="stylesheet" type="text/css">
 <link href="js/html5imageupload/html5imageupload.css" rel="stylesheet" type="text/css">
 
             <section class="content-central miborder" style="margin-top: 8%" >
-                <!-- Shadow Semiboxed -->
                 <div class="semiboxshadow text-center">
                     <img src="img/img-theme/shp.png" class="img-responsive" alt="">
                 </div>
-                <!-- End Shadow Semiboxed -->
-
-                <!-- End content info - page Fill with -->
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container" >
@@ -116,6 +112,6 @@
                     </div>
                 </div>
             </section>
-<?=include './include/footer.php';?>
+<?php include './include/footer.php';?>
 <script type="text/javascript" src="js/html5imageupload/html5imageupload.js"></script>
 <script type="text/javascript" src="js/saveperfil.js?<?= md5(microtime())?>"></script>

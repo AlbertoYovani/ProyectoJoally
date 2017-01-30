@@ -1,4 +1,4 @@
-<?=include'./include/header.php';?>
+<?php include'./include/header.php';?>
 
 <section class="content-central">
     <!-- Shadow Semiboxed -->
@@ -13,7 +13,7 @@
               <hr class="tall"> <!--Para mostrar uuna rayita -->
                 <div class="row">
                     <div class="col-md-10">
-                        <h2>Misión</h2>
+                        <h2 style="color: #843534 !important">Misión</h2>
                         <br>
                         <p class="lead">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <h2>Visión</h2>
+                        <h2 style="color: #843534 !important">Visión</h2>
                         <br>
                         <p class="lead">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
@@ -39,7 +39,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <h2>Politicas</h2>
+                        <h2 style="color: #843534 !important">Politicas</h2>
                         <br>
                         <p class="lead">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
@@ -55,4 +55,4 @@
     </div>   
 </section>
 
-<?=include'./include/footer.php';?>
+<?php include'./include/footer.php';?>
