@@ -13,9 +13,9 @@
               <hr class="tall"> <!--Para mostrar uuna rayita -->
                 <div class="row">
                     <div class="col-md-10">
-                        <h2 style="color: #843534 !important">Misión</h2>
+                        <h2 style="color: #A30000 !important">Misión</h2>
                         <br>
-                        <p class="lead">
+                        <p class="lead letra">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
                             vida de las personas al compartir una emoción con sus seres 
                             queridos y colaboradores a través de la originalidad y frescura 
@@ -26,9 +26,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <h2 style="color: #843534 !important">Visión</h2>
+                        <h2 style="color: #A30000 !important">Visión</h2>
                         <br>
-                        <p class="lead">
+                        <p class="lead letra">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
                             vida de las personas al compartir una emoción con sus seres 
                             queridos y colaboradores a través de la originalidad y frescura 
@@ -39,9 +39,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10">
-                        <h2 style="color: #843534 !important">Politicas</h2>
+                        <h2 style="color: #A30000 !important">Politicas</h2>
                         <br>
-                        <p class="lead">
+                        <p class="lead letra">
                             Nuestra misión es maravillar y crear momentos inolvidables en la 
                             vida de las personas al compartir una emoción con sus seres 
                             queridos y colaboradores a través de la originalidad y frescura 

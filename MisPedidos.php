@@ -16,7 +16,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 style="color: #843534 !important">MIS PEDIDOS</h2><br>
+                        <h2 style="color: #A30000 !important">MIS PEDIDOS</h2><br>
                     </div>
                 </div>
 

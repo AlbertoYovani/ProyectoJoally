@@ -13,7 +13,8 @@
 .content-central{	
 	max-width: 1230px;
 	margin: 0px auto;
-	background: #fff;
+        background-color: cornsilk;
+	/*Color de fonod del los objetivos*/
 	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.3);
 	box-shadow: 0 1px 10px rgba(0,0,0,0.3);

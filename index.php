@@ -7,7 +7,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="titles">
-                                    <h2><span style="color: #843534 !important">JOALLY ARREGLOS FRUTALES</span></h2>
+                                    <h2><span style="color: #A30000 !important">JOALLY ARREGLOS FRUTALES</span></h2>
                                     <hr class="tall">
                                 </div>                    
                             </div>

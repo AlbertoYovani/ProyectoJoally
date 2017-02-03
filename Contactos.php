@@ -17,7 +17,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 style="color: #843534 !important">HORARIO DE SERVICIO</h2><br>
+                        <h2 style="color: #A30000 !important">HORARIO DE SERVICIO</h2><br>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                 <hr class="tall"> <!--Para mostrar uuna rayita -->
                 
             <div class="container">
-                <h2 style="color: #843534 !important">CONTACTOS</h2>
+                <h2 style="color: #A30000 !important">CONTACTOS</h2>
                 <br>
                 <div class="row">
                     <!-- Sidebars -->

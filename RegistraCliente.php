@@ -9,7 +9,7 @@
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container" >
-                            <h3 class="cuenta">CREAR MI CUENTA</h3>
+                            <h3 class="cuenta" style="color: #A30000 !important">CREAR MI CUENTA</h3>
                             <div class="row">
                                 <!-- Newsletter-->
                                 <div class="col-md-8 col-centered" >

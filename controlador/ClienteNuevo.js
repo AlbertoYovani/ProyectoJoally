@@ -4,7 +4,8 @@ $(document).ready(function (){
         var contra1= $('input[name=ClPassword]').val();
         var contra2= $('input[name=ClPasswordConf]').val();
         if( contra1 == contra2){
-            
+            console.log(contra1);
+            console.log(contra2);
             $.ajax({
                 url:"controlador/NuevoCliente.php",
                 type:"POST",

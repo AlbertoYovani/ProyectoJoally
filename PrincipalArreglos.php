@@ -39,4 +39,4 @@
 </section>
       
 <?=include './include/footer.php';?>
-<script src="js/Arreglos.js"></script>
+            <script src="js/Arreglos.js?<?= md5(microtime())?>"></script>
