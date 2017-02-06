@@ -13,12 +13,15 @@
                             </div>
                         </div>
                         <div id="boxes-carousel">
-                            <?php for ($index = 1; $index <= 10; $index++) {?>
+                            <?php
+                            require_once 'conexion.php';
+                            $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo");
+                            while($res= mysqli_fetch_array($sql)){ ?>
                             <div>
                                 <div class="img-hover">
-                                    <img src="img/gallery-2/2.png" alt="" class="img-responsive">
+                                    <img src="<?=$res['imagen']?>" alt="" class="img-responsive">
                                     <div class="overlay">
-                                        <a href="img/gallery-2/2.png" class="fancybox"><i class="fa fa-plus-circle"></i></a>
+                                        <a href="<?=$res['imagen']?>" class="fancybox"><i class="fa fa-plus-circle"></i></a>
                                     </div>
                                 </div>
                                 <div class="info-gallery">

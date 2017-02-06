@@ -1,4 +1,4 @@
-<?=include './include/headerP.php';?>
+<?php include './include/headerP.php';?>
 
 <div class="content-central">
     <!-- Shadow Semiboxed -->
@@ -35,7 +35,7 @@
                                         Categoria
                                     </th>
                                     <th>
-                                        Tamaño
+                                        Clasificación
                                     </th>
                                     <th>
                                         Precio
@@ -52,8 +52,8 @@
                                 <tr>
                                     <td>
                                         <div class="img-hover">
-                                            <img src="img/gallery-2/1.jpg" alt="" class="img-responsive" style="width: 50px; height:50px">
-                                            <div class="overlay" style="width: 60px"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                            <img src="img/arreglos/img1.png" alt="" class="img-responsive" style="width: 50px; height:50px">
+                                            <div class="overlay" style="width: 60px"><a href="img/arreglos/img1.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                                         </div>
                                     </td>
                                     <td>
@@ -63,7 +63,7 @@
                                        Bodas
                                     </td>
                                     <td>
-                                        Grande
+                                        Sin Chocolate
                                     </td>
                                     <td>
                                         7
@@ -79,7 +79,21 @@
                         </table>
                     </div>
                 </div>
-               <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
+               
+               <div class="row">
+                    <div class="col-md-3">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary fa fa-taxi entrega" type="submit" name="domicilio">  Entrega a domicilio</button>
+                        </span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary fa fa-home" type="button" name="sucursal">  Recoger en sucursal</button>
+                        </span>
+                    </div>
+                </div>
+                <br><br>
+                <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-bordered">
@@ -96,19 +110,7 @@
                         </table>
                     </div>
                 </div>
-               <br><br>
-               <div class="row">
-                    <div class="col-md-3">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary fa fa-car" type="submit" name="registrar">  Entrega a domicilio</button>
-                        </span>
-                    </div>
-                    <div class="col-md-3">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary fa fa-home" type="button" name="cancelar">  Recoger en sucursal</button>
-                        </span>
-                    </div>
-                </div>
+               
             </div>
             <hr class="tall"> <!--Para mostrar una rayita -->
         </div>
@@ -116,6 +118,6 @@
     <!-- End content info - page Fill with  --> 
 </div>
 
-<?=include'./include/footer.php';?>
+<?php include'./include/footer.php';?>
         
 

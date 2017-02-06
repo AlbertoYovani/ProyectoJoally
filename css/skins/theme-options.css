@@ -3,7 +3,7 @@
 #layout{
 	overflow: hidden;
 	position: relative;
-	background: transparent;
+	background: #FFFFFF;
 	-webkit-transition: 0.5s all ease;
 	-moz-transition: 0.5s all ease;
 	-o-transition: 0.5s all ease;
@@ -13,7 +13,7 @@
 .content-central{	
 	max-width: 1230px;
 	margin: 0px auto;
-        background-color: cornsilk;
+        background-color: #FFFFFF;
 	/*Color de fonod del los objetivos*/
 	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.3);

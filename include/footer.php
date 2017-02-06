@@ -11,13 +11,13 @@
                                 <span>
                                     <i class="fa fa-facebook"></i>
                                 </span>
-                                <a href="https://www.facebook.com/arreglosfrutales.joallyocosingo?fref=ts" style="color: #ffffff !important">Facebook</a>
+                                <a href="https://www.facebook.com/arreglosfrutales.joallyocosingo?fref=ts" target="https://www.facebook.com/arreglosfrutales.joallyocosingo?fref=ts" style="color: #ffffff !important">Facebook</a>
                             </li>
-                            <li class="twitter">
+                            <li class="instagram">
                                 <span>
-                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-instagram"></i>
                                 </span>
-                                <a href="#" style="color: #ffffff !important">Twitter</a>
+                                <a href="https://www.instagram.com/explore/locations/472561609615840/arreglos-frutales-joally-ocosingo/" target="https://www.instagram.com/explore/locations/472561609615840/arreglos-frutales-joally-ocosingo/" style="color: #ffffff !important">Instagram</a>
                             </li>
                         </ul>
                     </div>
@@ -78,8 +78,9 @@
         <script type="text/javascript" src="js/main.js"></script>
         
         <script type="text/javascript" src="js/bootbox.min.js" ></script>
-        
+        <!--Script de las ventanas emergentes-->
         <script type="text/javascript" src="js/registrarme.js" ></script>
+        <script type="text/javascript" src="js/tipoentrega.js" ></script>
         
         <script type="text/javascript">
             jQuery(document).ready(function() { 

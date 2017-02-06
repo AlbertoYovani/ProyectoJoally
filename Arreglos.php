@@ -1,6 +1,6 @@
-<?php include'./include/header.php';?>
-
-<div class="content-central">
+<?php include'./include/headerR.php';?>
+<br><br><br><br><br><br><br><br>
+<div class="content-central"><br><br><br><br>
     <!-- Shadow Semiboxed -->
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
@@ -19,10 +19,12 @@
                     </div>
                     <div class="row">
                         <!-- Item Gallery-->
+                        <?php for ($i = 1; $i < 11; $i++) {?>
                         <div class="col-xs-12 col-sm-6 col-md-4">
+                            
                             <div class="img-hover">
-                                <img src="img/gallery-2/2.png" alt="" class="img-responsive">
-                                <div class="overlay"><a href="img/gallery-2/2.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                <img src="img/logo.png" alt="" class="img-responsive">
+                                <div class="overlay"><a href="img/logo.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                             </div>
                             <div class="info-gallery">
                                 <h3>
@@ -31,7 +33,9 @@
                                 <div class="content-btn"><a class="btn btn-primary avisoderegistro">Pedir</a></div>
                                 <div class="price"><span>$</span><b>Desde</b>45</div>
                             </div>
+                            
                         </div>
+                        <?php }?>
                     </div>
                 </div>
             </div>

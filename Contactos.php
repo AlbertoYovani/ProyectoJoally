@@ -1,6 +1,6 @@
 
-<?php include'./include/header.php';?>
-
+<?php include'./include/headerR.php';?>
+<br><br><br><br><br><br><br><br>
 <div class="content-central">
     <!-- Shadow Semiboxed -->
     <div class="semiboxshadow text-center">
@@ -20,74 +20,15 @@
                         <h2 style="color: #A30000 !important">HORARIO DE SERVICIO</h2><br>
                     </div>
                 </div>
-
                 <div class="row" >
                     <div class="col-md-8">
-
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Dia de la semana
-                                    </th>
-                                    <th>
-                                        Horarios
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        Lunes
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y  de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Martes
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Miercoles
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Jueves
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Viernes
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Sabado
-                                    </td>
-                                    <td>
-                                        9:00 am - 01:00 pm   y   de 03:00 pm - 08:00 pm
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <aside>
+                            <address>
+                                <strong>VISITANOS DE LUNES A SABADO</strong><br>
+                                <i class="fa fa-clock-o"></i><strong>Nuestro horario de servicio es de :</strong>  9:00 am - 01:00 pm y de 03:00 pm - 08:00 pm<br>
+                            </address>
+                        </aside>
                     </div>
-                    
                 </div>
             </div>
             

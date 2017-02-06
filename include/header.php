@@ -114,7 +114,7 @@
                                 data-speed="300" data-endspeed="300"
                                 data-start="400"
                                 data-easing="Power3.easeInOut">
-                                <img alt="" src="img/arreglos-png/FelizdiaEspecial.png">
+                                <img alt="" src="img/arreglos/img2.png">
                             </div>
                         </li>
                     </ul>

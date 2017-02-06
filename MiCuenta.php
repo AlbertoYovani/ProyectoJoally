@@ -1,4 +1,4 @@
-<?=include './include/headerP.php';?>
+<?php include './include/headerP.php';?>
 <link href="js/html5imageupload/demo.html5imageupload.css" rel="stylesheet" type="text/css">
 <link href="js/html5imageupload/html5imageupload.css" rel="stylesheet" type="text/css">
 
@@ -116,6 +116,6 @@
                     </div>
                 </div>
             </section>
-<?=include './include/footer.php';?>
+<?php include './include/footer.php';?>
 <script type="text/javascript" src="js/html5imageupload/html5imageupload.js"></script>
 <script type="text/javascript" src="js/saveperfil.js?<?= md5(microtime())?>"></script>

@@ -36,8 +36,7 @@ p.lead .line,
 .filter-header,
 /*Color de la barra del navegador*/
 .filter-header input[type="button"]{ 
-	background-color: #A30000 !important; 
-        background: #A30000 !important;
+        background: #A30000 !important;/*Cambia el color de la barra de navegacion*/
 }
 .opacy_bg_03,
 .item-team-01 .info-team,
@@ -89,8 +88,8 @@ blockquote > a,
 .pagination > li > a, .pagination > li > span,
 address i,
 address a{
-    /*Otorga el color cuando pasa el cursor sobre alguna opcion ul li a*/
-	color: #FFFEFE !important;
+    /*Otorga el color cuando pasa el cursor sobre alguna opcion ul li a  y tambien a los iconos*/
+	color: #A4A4A4 !important;
 }
 
 /* Borders ----------------------------------------------------------*/

@@ -29,7 +29,7 @@ $(document).ready(function (){
                     alert('REGISTRO GUARDADO');
                 }
             },error: function (e) {
-                console.log(e)
+                console.log(e);
             }
         })
     })
