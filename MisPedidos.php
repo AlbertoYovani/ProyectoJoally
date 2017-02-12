@@ -16,7 +16,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 style="color: #A30000 !important">MIS PEDIDOS</h2><br>
+                        <h2 class="losp">MIS PEDIDOS</h2><br>
                     </div>
                 </div>
 
@@ -56,24 +56,13 @@
                                             <div class="overlay" style="width: 60px"><a href="img/arreglos/img1.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                                         </div>
                                     </td>
-                                    <td>
-                                        Sin chocolate
-                                    </td>
-                                    <td>
-                                       Bodas
-                                    </td>
-                                    <td>
-                                        Sin Chocolate
-                                    </td>
-                                    <td>
-                                        7
-                                    </td>
+                            <td></td>
+                                    <td>Bodas</td>
+                                    <td>Sin Chocolate</td>
+                                    <td>$120.00</td>
                                     <td style="width: 200px;"> 
-                                        <textarea style="border: none !important" name="dedicatoria" class="form-control pedido opc" placeholder="Mi tarjeta tiene que decir... "></textarea>
-                                    </td>
-                                    <td style="width: 20px">
-                                        <i class="fa fa-trash-o"></i>
-                                    </td>
+                                        <textarea style="border: none !important" name="dedicatoria" class="form-control pedido opc" placeholder="Mi tarjeta tiene que decir... "> </textarea></td>
+                                    <td style="width: 20px"><i class="fa fa-trash-o"></i></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -88,7 +77,7 @@
                     </div>
                     <div class="col-md-3">
                         <span class="input-group-btn">
-                            <button class="btn btn-primary fa fa-home" type="button" name="sucursal">  Recoger en sucursal</button>
+                            <button class="btn btn-primary fa fa-home entregaDomicilio" type="button" name="sucursal">  Recoger en sucursal</button>
                         </span>
                     </div>
                 </div>
@@ -102,7 +91,7 @@
                                     <th>
                                         Total
                                     </th>
-                                    <th style="width: 100px !important">
+                                    <th style="width: 200px !important">
                                          $ 1200.00
                                     </th>
                                 </tr>

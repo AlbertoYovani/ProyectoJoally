@@ -7,19 +7,19 @@ $(document).ready(function(){
                         '<div class="col-md-1">'+
                             '</div>'+
                             '<div class="col-md-11">'+
-                                '<p>Para poder realizar tu pedido crea tu cuenta, no te quitara mas de 1 munito</p>'+
+                                '<p class="losp tamanio">Para poder realizar tu pedido crea tu cuenta, no te quitara mas de 1 munito</p>'+
                             '</div>'+
                     '</div>',
             buttons:{
                 Cancelar:{
                     label:'Cancelar',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
                     callback:function () {
                         
                     }
                 },Aceptar:{
                     label:'Registrarme',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
                     callback:function () {
                         location.href = "RegistraCliente.php";
                     }

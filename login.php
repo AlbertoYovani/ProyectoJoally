@@ -1,16 +1,23 @@
 <?php
-include '../conexion.php';
+    require_once('conexion.php');
+    session_start();
+    $usuario = filter_input(INPUT_POST, 'usuario');
+    $ClPassword = filter_input(INPUT_POST, 'ClPassword');
+    $error = '';
 
-	$usuario=$_POST['usuario'];
-	$pass=$_POST['ClPassword'];
-        
-        
-        $sql=  mysqli_query($conexion, "SELECT * FROM cliente WHERE usuario='$usuario' AND ClPassword=('$pass')");
-        $row=mysqli_fetch_array($sql);
-        if(!empty($row)){
-                session_start();
-		header('location:PrincipalArreglos.php');
-        }else{
-            echo '<script>alert("Datos incorrectos"); window.location.href="index.php";</script>';
-        }
+    $sql = "SELECT * FROM cuenta WHERE usuario = '$usuario' AND ClPassword='$ClPassword' ";
+    $query= mysqli_query(ConexionBd(),$sql);
+
+    if (mysqli_num_rows($query)) {
+        $res=$query->fetch_assoc();
+        $_SESSION['id']= $res['id'];
+        echo json_encode(array(
+            'accion'=>'1'
+        ));
+    }else{
+        echo json_encode(array(
+            'accion'=>'2'
+        ));
+    }
 ?>
+

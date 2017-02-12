@@ -81,6 +81,7 @@
         <!--Script de las ventanas emergentes-->
         <script type="text/javascript" src="js/registrarme.js" ></script>
         <script type="text/javascript" src="js/tipoentrega.js" ></script>
+        <script type="text/javascript" src="js/login.js?<?=md5(microtime())?>'" ></script>
         
         <script type="text/javascript">
             jQuery(document).ready(function() { 

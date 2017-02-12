@@ -6,10 +6,14 @@ $(document).ready(function(){
             message:'<div class="row">'+
                     '<div class="col-md-12">'+
                             '<table style= "margin-left:60px !important">'+
-                            '<tr>'+
+                                '<tr>'+
                                     '<td>Costo de envio:</td>'+
                                     '<td><input type="text" name="costo" class="form-control pedido opci" value="$30.00" disabled="true"> </td>'+
                                 '</tr>'+
+                                '<tr>'+
+                                    '<td>Fecha de envio: </td>'+
+                                    '<td> <input type="date" name="fechaentrega" class="form-control pedido opci"></td>'+
+                                '</tr>'+                                
                                 '<tr>'+
                                     '<td>Lo recibe:</td>'+
                                     '<td><input type="text" name="recibe" class="form-control pedido opci" ></td>'+
@@ -28,13 +32,49 @@ $(document).ready(function(){
             buttons:{
                 Cancelar:{
                     label:'Cancelar',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
                     callback:function () {
                         
                     }
                 },Aceptar:{
                     label:'Aceptar',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
+                    callback:function () {
+                        var cantidad=parseInt($('body input[name=cantidad]').val());
+                        var TotalActual=parseInt($('body .cantidad-productos').text());
+                        var NuevoTotal=(TotalActual+cantidad);
+                        $('body .cantidad-productos').text(NuevoTotal);
+                    }
+                }
+            }
+            //para cerrar la ventan de pedidos con la tecla Esc
+            ,onEscape:function(){}
+        })
+    })
+    $('body').on('click','.entregaDomicilio',function () {
+        bootbox.dialog({
+            
+            title:'Lo necesito para:',
+            message:'<div class="row">'+
+                    '<div class="col-md-12">'+
+                            '<table style= "margin-left:60px !important">'+
+                                '<tr>'+
+                                    '<td>Fecha de entrega: </td>'+
+                                    '<td> <input type="date" name="fechaentrega" class="form-control pedido opci"></td>'+
+                                '</tr>'+
+                            '</table>'+
+                        '</div>'+
+                    '</div>',
+            buttons:{
+                Cancelar:{
+                    label:'Cancelar',
+                    className:'estilobtn',
+                    callback:function () {
+                        
+                    }
+                },Aceptar:{
+                    label:'Aceptar',
+                    className:'estilobtn',
                     callback:function () {
                         var cantidad=parseInt($('body input[name=cantidad]').val());
                         var TotalActual=parseInt($('body .cantidad-productos').text());

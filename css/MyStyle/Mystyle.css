@@ -3,7 +3,7 @@
     margin: auto;
 }
 .back-vt{
-    background-color: #A30000 !important;
+    background-color: #01DF01 !important;
 }
 .color-white{
     color: white !important;
@@ -30,8 +30,30 @@
 .opci {
     width: 350px !important;
 }
-.letra{
-    color: #A30000 !important;
+.losh2{
+    color:  #01DF01!important;
+}
+.losh4{
+    color:  #01DF01!important;
+}
+.losp{
+    color: #F00001 !important;
+}
+.tamanio{
+    font-size: 17px !important; 
+}
+.backcolor{
+    background-color: #01DF01 !important;
+}
+.estilobtn{
+    background-color: #01DF01; 
+    color: #FEFBFB; 
+    font-size: 16px !important; 
+    height: 38px ; width: 110px; 
+    border-radius: 4px !important;
+}
+.coloricon{
+    color: #848484 !important;
 }
 
 

@@ -41,7 +41,7 @@ html {
 }
 body{
 	font-family: 'Open Sans', sans-serif;
-	color: #A30000 !important;
+	color: #F00001 !important;
 	font-size: 1rem;
 	font-weight: lighter;
 	line-height: 1.5rem;
@@ -49,7 +49,7 @@ body{
 h1, h2, h3, h4, h5, h6 {	
 	padding: 5px 0 15px 0;	
 	margin: 0;	
-	color: #272727;
+	color: #01DF01;
 	font-weight: normal;
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -2399,10 +2399,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 /* Galley ---------------------------------------------------------------*/
-.info-gallery{
+.info-gallery{ 
 	position: relative;
 	text-align: center;
-	border:solid #AC1916 1px;
+	border:solid #F00001 1px;   /* #F00001 COlor de las lineas de la linea del tiempo__________/\________________*/
 	padding: 20px 12px 30px 12px;
 	margin-bottom: 40px;
 }
@@ -2410,9 +2410,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	border-right: 0;
 }
 .info-gallery:before {
-  	border: 20px solid #AC1916;
-	border-right-color: transparent;
-  	border-left-color: transparent;
+  	border: 20px solid #F00001;   /* #F00001COlor de las pestañitas dela linea del tiempo__________/\________________*/
+	border-right-color: transparent;                                
+  	border-left-color: transparent;                                     
   	border-top-color: transparent;
   	content: "";
   	display: block;
@@ -3566,7 +3566,7 @@ address strong{
     text-align: left!important;
 }
 .modal-header,  .modal-header h4{
-    background: #A30000 !important;
+    background: #01DF01 !important;
     padding: 5px!important;
     
 }

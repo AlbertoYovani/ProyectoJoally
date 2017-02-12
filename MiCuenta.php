@@ -13,7 +13,7 @@
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container" >
-                            <h3 class="cuenta" style="color: #843534 !important">ADMINISTRAR MI CUENTA</h3>  
+                            <h3 class="cuenta losp">ADMINISTRAR MI CUENTA</h3>  
                             <div class="row">
                                 <!-- Newsletter-->
                                 <div class="col-md-8 col-centered" >                                    
@@ -27,6 +27,13 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <?php
+                                                require_once './conexion.php';
+                                                $ID=$_SESSION['id'];
+                                                $sql = mysqli_query(ConexionBd(), "SELECT * FROM cliente,cuenta WHERE cliente.id=cuenta.idCliente AND cuenta.id='$ID' ;");
+                                                $res=$sql->fetch_assoc(); 
+                                                
+                                                ?>
                                             <div class="col-md-6">
                                                 <div class="perfil">
                                                     <div id="retrievingfilename" class="html5imageupload" data-width="500" data-height="500" data-url="controllers/copiarimagen" style="width: 250px;height: 211px;">
@@ -41,7 +48,7 @@
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-user color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Nombre Completo" name="nombre" type="text" required="" pattern="[a-zA-Z-\s]{1,30}" maxlength="40" autofocus>
+                                                    <input class="form-control"  value="<?=$res['nombre']?>" placeholder="Nombre Completo" name="nombre" type="text" required="" pattern="[a-zA-Z-\s]{1,30}" maxlength="40">
                                                     <!--<span class="input-group-addon back-vt">
                                                     </span> --> <!-- está parte agrega una orilla de color rojo -->
                                                 </div>
@@ -51,28 +58,28 @@
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-envelope color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="ejemplo@hotmail.com" name="correo" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                                                    <input class="form-control" value="<?=$res['correo']?>" placeholder="ejemplo@hotmail.com" name="correo" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-phone color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="961 168 86 97" name="telefono" type="text" required="" maxlength="12" pattern="[0-9]{10,12}">
+                                                    <input class="form-control" value="<?=$res['telefono']?>" placeholder="961 168 86 97" name="telefono" type="text" required="" maxlength="12" pattern="[0-9]{10,12}">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">               
                                                         <i class="fa fa-birthday-cake color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Fecha de Nacimiento" name="fechanac" type="date" required="">
+                                                    <input class="form-control" value="<?=$res['fechanac']?>" placeholder="Fecha de Nacimiento" name="fechanac" type="date" required="">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-user-secret color-white"></i>
                                                     </span>
-                                                    <input class="form-control" placeholder="Usuario" name="usuario" type="text" required="" maxlength="20" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,20}">
+                                                    <input class="form-control" value="<?=$res['usuario']?>" placeholder="Usuario" name="usuario" type="text" required="" maxlength="20" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,20}">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
@@ -80,13 +87,6 @@
                                                         <i class="fa fa-unlock-alt color-white"></i>
                                                     </span>
                                                     <input class="form-control" placeholder="Contraseña" name="ClPassword" type="password" >
-                                                </div>
-                                                <br>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-unlock-alt color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" placeholder="Confirmar Contraseña" name="ClPasswordConf" type="password" > 
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
@@ -100,12 +100,7 @@
                                         <div class="row">
                                         <div class="col-md-3">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="submit" name="registrar">Guardar</button>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="button" name="cancelar" onclick="location.href='index.php'">Cancelar</button>
+                                                <button class="btn btn-primary" type="submit" name="registrar">Guardar Cambios</button>
                                             </span>
                                         </div>
                                     </div>   

@@ -1,3 +1,4 @@
+<?php  session_start();?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,7 +59,7 @@
                                 <li><a href="PrincipalArreglos.php">XV AÑOS</a> </li>
                                 <li><a href="PrincipalArreglos.php">BODAS</a> </li>
                                 <li><a href="PrincipalArreglos.php">BAUTIZOS</a> </li>
-                                <li><a href="PrincipalArreglos.php">PERSONALIZADOS</a> </li>
+                                <li><a href="PrincipalArreglos.php">TODOS</a> </li>
                             </ul>
                         </li>
                         <li><a href="MiCuenta.php">MI CUENTA</a></li>
@@ -69,11 +70,11 @@
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
                                 <li>
-                                    <a href="index.php" style="font-size: 16px; color: #FF0000" >Cerrar Sesión</a> 
+                                    <a href="logout.php" style="font-size: 16px; color: #FF0000" >Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
                                 </li>
                             </ul>
                         </li>
-                        <li class="login-form ">
+                        <li class="login-form">
                             <div >
                                 <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
                                 <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">

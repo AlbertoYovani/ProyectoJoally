@@ -5,7 +5,7 @@ $(document).ready(function(){
             message:'<div class="row">'+
                         '<div class="col-md-3">'+
                             '<div class="ventana_arreglo">'+
-                            '<img src="" style="width: 130px">'+
+                            '<img src="">'+
                         '</div>'+
                         '</div>'+
                         '<div class="col-md-9">'+
@@ -48,13 +48,13 @@ $(document).ready(function(){
             buttons:{
                 Cancelar:{
                     label:'Cancelar',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
                     callback:function () {
                         
                     }
                 },Aceptar:{
                     label:'Aceptar',
-                    className:'btn btn-primary',
+                    className:'estilobtn',
                     callback:function () {
                         var cantidad=parseInt($('body input[name=cantidad]').val());
                         var TotalActual=parseInt($('body .cantidad-productos').text());

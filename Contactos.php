@@ -17,7 +17,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 style="color: #A30000 !important">HORARIO DE SERVICIO</h2><br>
+                        <h2 class="losh4">HORARIO DE SERVICIO</h2><br>
                     </div>
                 </div>
                 <div class="row" >
@@ -25,7 +25,7 @@
                         <aside>
                             <address>
                                 <strong>VISITANOS DE LUNES A SABADO</strong><br>
-                                <i class="fa fa-clock-o"></i><strong>Nuestro horario de servicio es de :</strong>  9:00 am - 01:00 pm y de 03:00 pm - 08:00 pm<br>
+                                <i class="fa fa-clock-o coloricon"></i><strong>Nuestro horario de servicio es de :</strong>  9:00 am - 01:00 pm y de 03:00 pm - 08:00 pm<br>
                             </address>
                         </aside>
                     </div>
@@ -35,7 +35,7 @@
                 <hr class="tall"> <!--Para mostrar uuna rayita -->
                 
             <div class="container">
-                <h2 style="color: #A30000 !important">CONTACTOS</h2>
+                <h2 class="losh4">CONTACTOS</h2>
                 <br>
                 <div class="row">
                     <!-- Sidebars -->
@@ -43,14 +43,14 @@
                         <aside>
                             <address>
                                 <strong>Joally Arreglos Frutales</strong><br>
-                              <i class="fa fa-map-marker"></i><strong>Dirección: </strong> Ave. Central, a un costado de la capilla "La Buena Vountad"<br>
-                              <i class="fa fa-plane"></i><strong>Ciudad: </strong>Ocosingo, Chiapas CP 29950<br>
-                              <i class="fa fa-phone"></i> <strong title="Phone">Tel: 919 1232346</strong>
+                              <i class="fa fa-map-marker coloricon"></i><strong>Dirección: </strong> Ave. Central, a un costado de la capilla "La Buena Vountad"<br>
+                              <i class="fa fa-plane coloricon"></i><strong>Ciudad: </strong>Ocosingo, Chiapas CP 29950<br>
+                              <i class="fa fa-phone coloricon"></i> <strong title="Phone">Tel: 919 1232346</strong>
                             </address>
 
                             <address>
                               <strong>Joally Emails</strong><br>
-                              <i class="fa fa-envelope"></i><strong>Email:</strong>jaollyFrutas@hotmail.com<br>
+                              <i class="fa fa-envelope coloricon"></i><strong>Email:</strong>jaollyFrutas@hotmail.com<br>
                             </address>
                         </aside>
                     </div>

@@ -15,7 +15,7 @@
                 <div class="col-md-12">
                     <!-- Title Results-->
                     <div class="title-results">
-                        <h3 style="color: #843534 !important">ARREGLOS MÁS BUSCADOS</h3>
+                        <h2 class="losp">ARREGLOS MÁS BUSCADOS</h2>
                     </div>
                     <div class="row">
                         <!-- Item Gallery-->
@@ -23,8 +23,8 @@
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             
                             <div class="img-hover">
-                                <img src="img/logo.png" alt="" class="img-responsive">
-                                <div class="overlay"><a href="img/logo.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                <img src="img/arreglos/img2.png" alt="" class="img-responsive">
+                                <div class="overlay"><a href="img/arreglos/img2.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                             </div>
                             <div class="info-gallery">
                                 <h3>

@@ -36,7 +36,7 @@ p.lead .line,
 .filter-header,
 /*Color de la barra del navegador*/
 .filter-header input[type="button"]{ 
-        background: #A30000 !important;/*Cambia el color de la barra de navegacion*/
+        background: #F00001 !important;/*Cambia el color de la barra de navegacion*/
 }
 .opacy_bg_03,
 .item-team-01 .info-team,
@@ -89,7 +89,7 @@ blockquote > a,
 address i,
 address a{
     /*Otorga el color cuando pasa el cursor sobre alguna opcion ul li a  y tambien a los iconos*/
-	color: #A4A4A4 !important;
+	color: #F00001 !important;
 }
 
 /* Borders ----------------------------------------------------------*/
@@ -103,7 +103,9 @@ address a{
 .post-format-icon > i,
 .section-title-03 h1,
 .title-widget{
-	border-color: #E01017 !important;
+	border-color: #01DF01 !important;
+  /*Color de las barritas en que clasificacion se enceuntra, esto en la pagina de 
+  principalArreglos*/
 }
 .crumbs:before{
 	border-bottom: 20px solid #E01017;

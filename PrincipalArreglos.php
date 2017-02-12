@@ -14,10 +14,10 @@
                 <hr class="tall">
                 <!-- Nav Filters -->
                 <div class="portfolioFilter">
-                    <a href="#" data-filter="*" class="current">TODOS</a>
-                    <a href="#" data-filter=".beach">SIN CHOCOLATE</a>
-                    <a href="#beach" data-filter="*">CON CHOCOLATE</a>
-                    <a href="#nature" data-filter=".nature">CON EXTRA-CHOCOLATE</a>
+                    <a href="#" data-filter="*" class="current losp">TODOS</a>
+                    <a href="#" data-filter=".beach" class="losp">SIN CHOCOLATE</a>
+                    <a href="#beach" data-filter="*" class="losp">CON CHOCOLATE</a>
+                    <a href="#nature" data-filter=".nature" class="losp">EXTRA-CHOCOLATE</a>
                 </div>
                 <div class="portfolioContainer">
                     <?php
@@ -25,14 +25,14 @@
                         $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo");
                         while($res= mysqli_fetch_array($sql)){ ?>
                     <!--Es es un arreglo para pedir-->
-                    <div class="col-xs-12 col-sm-6 col-md-3 nature">
+                        <div class="col-xs-12 col-sm-6 col-md-3 nature">
                         <div class="img-hover">
                             <img src="<?=$res['imagen']?>" alt="" class="img-responsive" style="width: 300px !important;height: 300px !important">
                             <div class="overlay"><a href="<?=$res['imagen']?>" class="fancybox" ><i class="fa fa-plus-circle"></i></a></div>
                         </div>
                         <div class="info-gallery">
                             <div class="content-btn"><a class="btn btn-primary ventana" >Agregar a mi lista</a></div>
-                            <div class="price"><span>$</span><?=$res['precio'] ?></div>
+                            <div class="price"><span>$</span><?=$res['precio'] ?>.00</div>
                         </div>
                     </div>
                     <?php } ?>

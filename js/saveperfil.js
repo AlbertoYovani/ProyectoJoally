@@ -12,7 +12,6 @@ $(document).ready(function (){
         onSave: function(data) {
                 console.log(data);
         },
-
     });
     $('#nuevo_registro').submit(function (e) {
         e.preventDefault();
@@ -27,6 +26,7 @@ $(document).ready(function (){
                 console.log(data)
                 if(data.accion=='1'){
                     alert('REGISTRO GUARDADO');
+                    location.href= 'index.php';
                 }
             },error: function (e) {
                 console.log(e);
