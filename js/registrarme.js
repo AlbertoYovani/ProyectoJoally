@@ -4,11 +4,9 @@ $(document).ready(function(){
             
             title:'Realizar un pedido',
             message:'<div class="row">'+
-                        '<div class="col-md-1">'+
-                            '</div>'+
-                            '<div class="col-md-11">'+
-                                '<p class="losp tamanio">Para poder realizar tu pedido crea tu cuenta, no te quitara mas de 1 munito</p>'+
-                            '</div>'+
+                        '<div class="col-md-11">'+
+                            '<p class="losp tamanio">Para poder realizar tu pedido crea tu cuenta, no te quitara mas de 1 munito</p>'+
+                        '</div>'+
                     '</div>',
             buttons:{
                 Cancelar:{

@@ -22,47 +22,25 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-pedidos">
                             <thead>
                                 <tr>
-                                    <th>
-                                        Imagen
-                                    </th>
-                                    <th>
-                                        Nombre
-                                    </th>
-                                    <th>
-                                        Categoria
-                                    </th>
-                                    <th>
-                                        Clasificación
-                                    </th>
-                                    <th>
-                                        Precio
-                                    </th>
-                                    <th>
-                                        Dedicatoria
-                                    </th>
-                                    <th>
-                                        X
-                                    </th>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Categoria</th>
+                                    <th>Precio</th>
+                                    <th>Clasificación</th>
+                                    <th>Dedicatoria</th>
+                                    <th>Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="img-hover">
-                                            <img src="img/arreglos/img1.png" alt="" class="img-responsive" style="width: 50px; height:50px">
-                                            <div class="overlay" style="width: 60px"><a href="img/arreglos/img1.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                        </div>
+                                <tr >
+                                    <td colspan="7">
+                                        <center>
+                                            <i class="fa fa-spinner fa-pulse fa-2x"></i>
+                                        </center>
                                     </td>
-                            <td></td>
-                                    <td>Bodas</td>
-                                    <td>Sin Chocolate</td>
-                                    <td>$120.00</td>
-                                    <td style="width: 200px;"> 
-                                        <textarea style="border: none !important" name="dedicatoria" class="form-control pedido opc" placeholder="Mi tarjeta tiene que decir... "> </textarea></td>
-                                    <td style="width: 20px"><i class="fa fa-trash-o"></i></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -85,7 +63,7 @@
                 <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered ">
                             <thead>
                                 <tr>
                                     <th>
@@ -101,12 +79,14 @@
                 </div>
                
             </div>
-            <hr class="tall"> <!--Para mostrar una rayita -->
+            <hr class="tall">
+            <input type="hidden" name="Tabla" value="Pedidos">
         </div>
     </div>   
     <!-- End content info - page Fill with  --> 
 </div>
 
 <?php include'./include/footer.php';?>
+<script src="js/Arreglos.js" type="text/javascript"></script>
         
 

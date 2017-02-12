@@ -30,8 +30,8 @@
                             <img src="<?=$res['imagen']?>" alt="" class="img-responsive" style="width: 300px !important;height: 300px !important">
                             <div class="overlay"><a href="<?=$res['imagen']?>" class="fancybox" ><i class="fa fa-plus-circle"></i></a></div>
                         </div>
-                        <div class="info-gallery">
-                            <div class="content-btn"><a class="btn btn-primary ventana" >Agregar a mi lista</a></div>
+                            <div class="info-gallery" style="background: transparent">
+                            <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="<?=$res['id']?>">Agregar a Carrito</a></div>
                             <div class="price"><span>$</span><?=$res['precio'] ?>.00</div>
                         </div>
                     </div>
@@ -44,4 +44,4 @@
 </section>
       
 <?php include './include/footer.php';?>
-            <script src="js/Arreglos.js?<?= md5(microtime())?>"></script>
+<script src="js/Arreglos.js?<?= md5(microtime())?>"></script>

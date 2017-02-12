@@ -3,13 +3,6 @@ $(document).ready(function($) {
 	'use strict';
 
 	//=================================== Twitter Feed  ===============================//
-  $("#twitter").tweet({
-      modpath: 'js/twitter/index.php',
-      username: "envato", // Change for Your Username
-      count: 5,
-      loading_text: "Loading tweets..."
-  });
-
   //=================================== Flikr Feed  ========================================//
   $('#flickr').jflickrfeed({
     limit: 8, //Number of images to be displayed
@@ -119,26 +112,6 @@ $(document).ready(function($) {
     	singleItem: true,
     	pagination : true
 	});
-
-	//=================================== Subtmit Form  ===================================//
-	$('#form-contact').submit(function(event) {  
-	     event.preventDefault();  
-	     var url = $(this).attr('action');  
-	     var datos = $(this).serialize();  
-	     	$.get(url, datos, function(resultado) {  
-	     	$('#result').html(resultado);  
-		});  
- 	});
-
-  //=================================== Form Newslleter  =================================//
-  $('#newsletterForm').submit(function(event) {  
-       event.preventDefault();  
-       var url = $(this).attr('action');  
-       var datos = $(this).serialize();  
-        $.get(url, datos, function(resultado) {  
-        $('#result-newsletter').html(resultado);  
-    });  
-  });  
 
   //=================================== Ligbox  ===========================================//	
   $(".fancybox").fancybox({

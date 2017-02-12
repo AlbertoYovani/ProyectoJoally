@@ -47,44 +47,37 @@
         <!-- jQuery local--> 
         <script src="js/jquery.js"></script>  
         <script src="js/jquery-ui.1.10.4.min.js"></script>                
-        <!--Nav-->
         <script src="js/nav/jquery.sticky.js" type="text/javascript"></script>    
-        <!--Totop-->
         <script type="text/javascript" src="js/totop/jquery.ui.totop.js" ></script>  
-         <!--Accorodion-->
         <script type="text/javascript" src="js/accordion/accordion.js" ></script>  
-        <!--Slide Revolution-->
+        <script src="js/underscore-min.js" type="text/javascript"></script>
+        <script src="js/backbone-min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/rs-plugin/js/jquery.themepunch.tools.min.js" ></script>      
-        <script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>    
-        <!-- Maps -->
-        <script src="js/maps/gmap3.js"></script>            
-        <!--Ligbox--> 
+        <script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>  
+        <script src="js/jquery-notifications/js/demo/demo.js" type="text/javascript" ></script>
+        <script src="js/jquery-notifications/js/messenger.min.js" type="text/javascript"></script>
+        <script src="js/jquery-notifications/js/messenger-theme-future.js" type="text/javascript"></script>	
+        <script src="js/jquery-notifications/js/demo/location-sel.js" type="text/javascript" ></script>
+        <script src="js/jquery-notifications/js/demo/theme-sel.js" type="text/javascript" ></script>
+        <script src="js/maps/gmap3.js"></script>         
         <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script> 
-        <!-- carousel.js-->
         <script src="js/carousel/carousel.js"></script>
-        <!-- Filter -->
         <script src="js/filters/jquery.isotope.js" type="text/javascript"></script>
-        <!-- Twitter Feed-->
-        <script src="js/twitter/jquery.tweet.js"></script> 
-        <!-- flickr Feed-->
+         <script src="js/twitter/jquery.tweet.js" type="text/javascript"></script>
         <script src="js/flickr/jflickrfeed.min.js"></script>    
-        <!--Theme Options-->
         <script type="text/javascript" src="js/theme-options/theme-options.js"></script>
         <script type="text/javascript" src="js/theme-options/jquery.cookies.js"></script> 
-        <!-- Bootstrap.js-->
         <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
         <script type="text/javascript" src="js/bootstrap/bootstrap-slider.js"></script> 
-        <!--MAIN FUNCTIONS-->
         <script type="text/javascript" src="js/main.js"></script>
-        
         <script type="text/javascript" src="js/bootbox.min.js" ></script>
-        <!--Script de las ventanas emergentes-->
         <script type="text/javascript" src="js/registrarme.js" ></script>
         <script type="text/javascript" src="js/tipoentrega.js" ></script>
         <script type="text/javascript" src="js/login.js?<?=md5(microtime())?>'" ></script>
-        
+        <script type="text/javascript" src="js/Mensajes.js?<?=md5(microtime())?>'" ></script>
         <script type="text/javascript">
             jQuery(document).ready(function() { 
+                TotalArreglos();
                 jQuery('.tp-banner').show().revolution({
                     dottedOverlay:"none",
                     delay:9000,

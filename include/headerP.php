@@ -26,7 +26,9 @@
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">  
-
+        <link href="js/jquery-notifications/css/messenger.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="js/jquery-notifications/css/messenger-theme-flat.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="js/jquery-notifications/css/location-sel.css" rel="stylesheet" type="text/css" media="screen"/>
        <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">  -->
         <!-- Head Libs -->
         <script src="js/modernizr.js"></script>

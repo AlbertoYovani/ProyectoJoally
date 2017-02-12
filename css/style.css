@@ -678,6 +678,7 @@ hr.tall{
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.3);
 }
 
+
 /* Nav Tabs ------------------------------*/
 .nav-tabs{
 	border: 0;
@@ -3565,6 +3566,10 @@ address strong{
     color:white!important;
     text-align: left!important;
 }
+.modal-title h4,.modal-title h5{
+    color:white!important;
+    padding-bottom: 2px!important;
+}
 .modal-header,  .modal-header h4{
     background: #01DF01 !important;
     padding: 5px!important;
@@ -3579,4 +3584,7 @@ address strong{
 }
 .modal-dialog{
     margin-top: 90px !important;
+}
+.pointer-icono{
+    cursor: pointer!important;
 }
