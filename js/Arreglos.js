@@ -3,58 +3,65 @@ $(document).ready(function(){
         bootbox.dialog({
                     title:'Iniciar Sesión',
                     message:'<div class="row" style="height:230px !important;">'+
-                                '<div class="col-md-11">'+
-                                        '<br><br>'+
-                                        '<input style="width:270px !important; height:50px !important" type="text" required="required" class="form-control" name="usuario" placeholder="Usuario" autofocus="true">'+
-                                        '<br><br>'+
-                                        '<input style="width:270px !important; height:50px !important" type="password" required="required" class="form-control" name="ClPassword1" placeholder="Contraseña">'+ 
-                                        '<br><br>'+
-                                        '¿Tienes una cuenta?<a href="RegistraCliente.php"> Crear una</a>'+
-                                        '<p class="login-error" style="color: #FF0000; height: 100%; width: 150px !important"></p>'+
+                                '<div class="col-md-12 col-centered">'+
+                                    '<div class="form-group">'+
+                                        '<div class="input-group">'+
+                                            '<span class="input-group-addon" style="background: #F00001;color: white;border: none">'+
+                                                '<i class="fa fa-user"></i>'+
+                                            '</span>'+
+                                            '<input type="text" class="form-control" placeholder="Usuario">'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="form-group">'+
+                                        '<div class="input-group">'+
+                                            '<span class="input-group-addon" style="background: #F00001;color: white;border: none">'+
+                                                '<i class="fa fa-unlock-alt"></i>'+
+                                            '</span>'+
+                                            '<input type="text" class="form-control" placeholder="Usuario">'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="form-group">'+
+                                        '<label>'+
+                                            '<a href="#" > ¿Tienes una Cuenta? Registrarme</a>'+
+                                        '</label>'+
+                                    '</div>'+
+                                    '<div class="form-group">'+
+                                        '<button class="btn btn-primary btn-block">Iniciar Sesión</button>'+
+                                    '</div>'+
                                 '</div>'+
                             '</div>',
-                    size:'small',
-                buttons:{
-                    Cancelar:{
-                        label:'Cancelar',
-                        className:'estilobtn',
-                        callback:function () {
-                        }
-                    },Aceptar:{
-                        label:'Aceptar',
-                        className:'estilobtn',
-                        callback:function () {
-                            var usuario=$('body input[name=usuario]').val();
-                            var ClPassword1=$('body input[name=ClPassword1]').val();
-                            
-                                $.ajax({
-                                    url: "controlador/Arreglos.php",
-                                    type: 'POST',
-                                    dataType: 'json',
-                                    data:{
-                                        usuario:usuario,
-                                        ClPassword1:ClPassword1,
-                                        accion:'InisioSesion'
-                                    },beforeSend: function (xhr) {
-                                    },success: function (data, textStatus, jqXHR) {
-                                        if(data.accion=='1'){
-                                            alert("Bienvenido");
-                                            location.href= 'PrincipalArreglos.php';
-                                        }if(data.accion='2'){
-                                            
-                                        }
-                                },error: function (e) {
-                                    console.log(e)
-                                    msj_error_serve();
-                                }
-                            })
-                        }
-                    }
-                }
+                    size:'small'
+               
             //para cerrar la ventan de pedidos con la tecla Esc
             ,onEscape:function(){}
         });
     })
+    $('body').on('click','.sdsd',function () {
+        $.ajax({
+            url: "controlador/Arreglos.php",
+            type: 'POST',
+            dataType: 'json',
+            data:{
+                usuario:usuario,
+                ClPassword1:ClPassword1,
+                accion:'InisioSesion'
+            },beforeSend: function (xhr) {
+            },success: function (data, textStatus, jqXHR) {
+                if(data.accion=='1'){
+                    alert("Bienvenido");
+                    location.href= 'PrincipalArreglos.php';
+                }if(data.accion='2'){
+
+                }
+            },error: function (e) {
+                console.log(e)
+                msj_error_serve();
+            }
+        })
+    })
+    
+    
+    
     $('body').on('click','.ver-arreglo',function () {
         var id=$(this).attr('data-id');
         $.ajax({

@@ -3,21 +3,12 @@ $(document).ready(function (){
         bootbox.dialog({
                     title:'Iniciar Sesión',
                     message:'<div class="row" style="height:230px !important;">'+
-                                '<div class="col-md-11">'+
-                                    '<table>'+
-                                        '<tr>'+
-                                           '<td>'+
-                                                '<br><br>'+
-                                                '<input style="width:270px !important;" type="text" required="required" class="form-control" name="usuario" placeholder="Usuario" autofocus="true">'+
-                                                '<br><br>'+
-                                                '<input style="width:270px !important;" type="password" required="required" class="form-control" name="ClPassword1" placeholder="Contraseña">'+ 
-                                                '<br><br>'+
-                                                '<a href="RegistraCliente.php">Registrarme</a>'+
-                                            '</td>'+
-                                        '</tr>'+
-                                        '<tr class="login-error" style="color: #FF0000; height: 100%; width: 150px !important">'+
-                                        '</tr>'+
-                                    '</table>'+
+                                '<div class="col-md-12">'+
+                                    '<div class="input-group m-b">'+
+                                        '<span class="input-group-addon">$</span>'+
+                                            '<input type="text" class="form-control">'+
+                                        '<span class="input-group-addon">.00</span'+
+                                    '</div>'+
                                 '</div>'+
                             '</div>',
                     size:'small',
