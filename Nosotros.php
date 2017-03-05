@@ -5,12 +5,10 @@
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
-    <!-- End Shadow Semiboxed -->
-    <!-- End content info - page Fill with -->
     <div class="content_info">
         <div class="paddings-mini">
             <div class="container">
-              <hr class="tall"> <!--Para mostrar uuna rayita -->
+              <hr class="tall"> <!--Para mostrar una rayita -->
                 <div class="row">
                     <div class="col-md-10">
                         <h2 class="losh2">Misión</h2>

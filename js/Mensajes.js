@@ -21,6 +21,7 @@ var TotalArreglos=function () {
             $('body .cantidad-productos').html(data.total);
         },error: function (e) {
             console.log(e)
+            msj_error_serve();
         }
     })
 }

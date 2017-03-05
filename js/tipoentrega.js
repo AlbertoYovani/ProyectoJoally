@@ -22,10 +22,6 @@ $(document).ready(function(){
                                     '<td>Direccion: </td>'+
                                     '<td> <textarea name="direccion" class="form-control pedido opci" placeholder="Dirección"></textarea></td>'+
                                 '</tr>'+
-                                '<tr>'+
-                                    '<td>Dato extra: </td>'+
-                                    '<td> <input type="text" name="datoextra" class="form-control pedido opci" placeholder="Mi casa es de color..."></td>'+
-                                '</tr>'+
                             '</table>'+
                         '</div>'+
                     '</div>',
@@ -33,17 +29,29 @@ $(document).ready(function(){
                 Cancelar:{
                     label:'Cancelar',
                     className:'estilobtn',
-                    callback:function () {
-                        
-                    }
                 },Aceptar:{
                     label:'Aceptar',
                     className:'estilobtn',
                     callback:function () {
-                        var cantidad=parseInt($('body input[name=cantidad]').val());
-                        var TotalActual=parseInt($('body .cantidad-productos').text());
-                        var NuevoTotal=(TotalActual+cantidad);
-                        $('body .cantidad-productos').text(NuevoTotal);
+                        $.ajax({
+                            url: "controlador/Arreglos.php",
+                            type: 'POST',
+                            dataType: 'json',
+                            data:{
+                                accion:'EntregaDomicilio'
+                            },beforeSend: function (xhr) {
+                                msj_loading();
+                            },success: function (data, textStatus, jqXHR) {
+                                if(data.accion=='1'){
+                                    msj_success_noti('Pedido Realizado');
+                                    bootbox.hideAll();
+                                    TotalArreglos();
+                                }
+                            },error: function (e) {
+                                console.log(e)
+                                msj_error_serve();
+                            }
+                        })
                     }
                 }
             }
@@ -68,18 +76,32 @@ $(document).ready(function(){
             buttons:{
                 Cancelar:{
                     label:'Cancelar',
-                    className:'estilobtn',
+                    className:'btn estilobtn',
                     callback:function () {
-                        
                     }
                 },Aceptar:{
                     label:'Aceptar',
-                    className:'estilobtn',
+                    className:'btn estilobtn',
                     callback:function () {
-                        var cantidad=parseInt($('body input[name=cantidad]').val());
-                        var TotalActual=parseInt($('body .cantidad-productos').text());
-                        var NuevoTotal=(TotalActual+cantidad);
-                        $('body .cantidad-productos').text(NuevoTotal);
+                        $.ajax({
+                            url: "controlador/Arreglos.php",
+                            type: 'POST',
+                            dataType: 'json',
+                            data:{
+                                accion:'RecojerSucursal'
+                            },beforeSend: function (xhr) {
+                                msj_loading();
+                            },success: function (data, textStatus, jqXHR) {
+                                if(data.accion=='1'){
+                                    msj_success_noti('Pedido Realizado');
+                                    bootbox.hideAll();
+                                    TotalArreglos();
+                                }
+                            },error: function (e) {
+                                console.log(e)
+                                msj_error_serve();
+                            }
+                        })
                     }
                 }
             }

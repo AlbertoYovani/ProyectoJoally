@@ -29,21 +29,12 @@
                                         <div class="row">
                                             <?php
                                                 require_once './conexion.php';
-                                                $ID=$_SESSION['id'];
+                                                $ID=$_SESSION['CUENTA_ID'];
                                                 $sql = mysqli_query(ConexionBd(), "SELECT * FROM cliente,cuenta WHERE cliente.id=cuenta.idCliente AND cuenta.id='$ID' ;");
                                                 $res=$sql->fetch_assoc(); 
                                                 
                                                 ?>
                                             <div class="col-md-6">
-                                                <div class="perfil">
-                                                    <div id="retrievingfilename" class="html5imageupload" data-width="500" data-height="500" data-url="controllers/copiarimagen" style="width: 250px;height: 211px;">
-                                                    <input type="file" name="thumb" style="height: 250px!important">
-                                                    </div>
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                    <br>
-                                                </div>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-user color-white"></i>
@@ -52,8 +43,7 @@
                                                     <!--<span class="input-group-addon back-vt">
                                                     </span> --> <!-- está parte agrega una orilla de color rojo -->
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
+                                                <br>
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">
                                                         <i class="fa fa-envelope color-white"></i>
@@ -67,7 +57,8 @@
                                                     </span>
                                                     <input class="form-control" value="<?=$res['telefono']?>" placeholder="961 168 86 97" name="telefono" type="text" required="" maxlength="12" pattern="[0-9]{10,12}">
                                                 </div>
-                                                <br>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <div class="input-group">
                                                     <span class="input-group-addon back-vt">               
                                                         <i class="fa fa-birthday-cake color-white"></i>

@@ -89,7 +89,7 @@ blockquote > a,
 address i,
 address a{
     /*Otorga el color cuando pasa el cursor sobre alguna opcion ul li a  y tambien a los iconos*/
-	color: #F00001 !important;
+	color: #FFFFFF !important;
 }
 
 /* Borders ----------------------------------------------------------*/

@@ -26,6 +26,7 @@
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">  
+        
         <link href="js/jquery-notifications/css/messenger.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="js/jquery-notifications/css/messenger-theme-flat.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="js/jquery-notifications/css/location-sel.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -56,7 +57,7 @@
                         </li>
                         <!-- End website title - Logo class -->
                         
-                        <li> <a href="PrincipalArreglos.php">ARREGLOS</a><ul class="drop-down one-column hover-fade"><!-- first level drop down -->
+                        <li><a>ARREGLOS</a><ul class="drop-down one-column hover-fade" style="background-color:#F00001 !important"><!-- first level drop down -->
                                 <li><a href="PrincipalArreglos.php">CUMPLEAÑOS</a> </li>
                                 <li><a href="PrincipalArreglos.php">XV AÑOS</a> </li>
                                 <li><a href="PrincipalArreglos.php">BODAS</a> </li>
@@ -71,14 +72,14 @@
                         <li class="login-form " ><!-- login form -->
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
-                                <li>
-                                    <a href="logout.php" style="font-size: 16px; color: #FF0000" >Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
+                                <li >
+                                    <a href="logout.php" style="font-size: 16px;">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
                                 </li>
                             </ul>
                         </li>
-                        <li class="login-form">
+                        <li class="login-form" onclick="window.location.href='MisPedidos.php'">
                             <div >
-                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
+                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" ></i>
                                 <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">
                                     <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>

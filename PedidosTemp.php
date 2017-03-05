@@ -1,10 +1,9 @@
-<?php include './include/headerP.php';?>
+<?php include './include/headerR.php';?>
 
 <div class="content-central">
     <!-- Shadow Semiboxed -->
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
-        
     </div>
     <div class="content_info">
         <div class="paddings-mini">
@@ -49,37 +48,16 @@
                <div class="row">
                     <div class="col-md-3">
                         <span class="input-group-btn">
-                            <button class="btn btn-primary fa fa-taxi entrega" type="submit" name="domicilio">  Entrega a domicilio</button>
+                            <button class="btn btn-primary fa fa-taxi avisoderegistro" type="submit" name="domicilio">  Entrega a domicilio</button>
                         </span>
                     </div>
                     <div class="col-md-3">
                         <span class="input-group-btn">
-                            <button class="btn btn-primary fa fa-home entregaDomicilio" type="button" name="sucursal">  Recoger en sucursal</button>
+                            <button class="btn btn-primary fa fa-home avisoderegistro" type="button" name="sucursal">  Recoger en sucursal</button>
                         </span>
                     </div>
                 </div>
-                <br>
-                <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="PrincipalArreglos.php">Pedir más...</a>
-                        <br>
-                        <br>
-                        <table class="table table-bordered ">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Total
-                                    </th>
-                                    <th style="width: 200px !important">
-                                         $ 1200.00
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-               
+                <br><br>
             </div>
             <hr class="tall">
             <input type="hidden" name="Tabla" value="Pedidos">
@@ -91,4 +69,5 @@
 <?php include'./include/footer.php';?>
 <script src="js/Arreglos.js?<?=md5(microtime())?>'" type="text/javascript"></script>
         
+
 

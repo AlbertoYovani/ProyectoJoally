@@ -71,9 +71,8 @@
         <script type="text/javascript" src="js/bootstrap/bootstrap-slider.js"></script> 
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/bootbox.min.js" ></script>
-        <script type="text/javascript" src="js/registrarme.js" ></script>
-        <script type="text/javascript" src="js/tipoentrega.js" ></script>
-        <script type="text/javascript" src="js/login.js?<?=md5(microtime())?>'" ></script>
+        <script type="text/javascript" src="js/registrarme.js?<?=md5(microtime())?>'" ></script>
+        <script type="text/javascript" src="js/tipoentrega.js?<?=md5(microtime())?>'"></script>
         <script type="text/javascript" src="js/Mensajes.js?<?=md5(microtime())?>'" ></script>
         <script type="text/javascript">
             jQuery(document).ready(function() { 

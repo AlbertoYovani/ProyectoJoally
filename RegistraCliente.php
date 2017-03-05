@@ -8,34 +8,24 @@
     <div class="content_info">
         <div class="paddings-mini">
             <div class="container" >
-                <h3 class="cuenta" style="color: #A30000 !important">CREAR MI CUENTA</h3>
+                <h3 class="cuenta" style="color: #F00001 !important">CREAR MI CUENTA</h3>
                 <div class="row">
                     <!-- Newsletter-->
                     <div class="col-md-10 col-centered" >
-                        <form id="nuevo_registro" enctype="multipart/form-data">
+                        <form id="nuevo_registro">
                                 <div class="row">
                                     <div class="col-md-6">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="perfil">
-                                            <div id="retrievingfilename" class="html5imageupload" data-width="500" data-height="500" data-url="controllers/copiarimagen" style="width: 250px;height: 211px;">
-                                                <input type="file" style="height: 250px!important" name="foto" id="foto">
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                        </div>
                                         <div class="input-group">
                                             <span class="input-group-addon back-vt">
                                                 <i class="fa fa-user color-white"></i>
                                             </span>
                                             <input class="form-control" placeholder="Nombre Completo" name="nombre" type="text" maxlength="40" >
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
+                                        <br>
                                         <div class="input-group">
                                             <span class="input-group-addon back-vt">
                                                 <i class="fa fa-envelope color-white"></i>
@@ -48,15 +38,15 @@
                                                 <i class="fa fa-phone color-white"></i>
                                             </span>
                                             <input class="form-control" placeholder="961 168 86 97" name="telefono" type="text" required="" maxlength="12" pattern="[0-9]{10,12}">
-                                        </div>
-                                        <br>
+                                        </div><br>
                                         <div class="input-group">
                                             <span class="input-group-addon back-vt">               
                                                 <i class="fa fa-birthday-cake color-white"></i>
                                             </span>
                                             <input class="form-control" placeholder="Fecha de Nacimiento" name="fechanac" type="date" >
                                         </div>
-                                        <br>
+                                    </div>
+                                    <div class="col-md-6 ">
                                         <div class="input-group">
                                             <span class="input-group-addon back-vt">
                                                 <i class="fa fa-user-secret color-white"></i>
@@ -64,18 +54,18 @@
                                             <input class="form-control" placeholder="Usuario" name="usuario" type="text" maxlength="20" >
                                         </div>
                                         <br>
-                                        <div class="input-group">
+                                        <div class="input-group form-login">
                                             <span class="input-group-addon back-vt">
                                                 <i class="fa fa-unlock-alt color-white"></i>
                                             </span>
-                                            <input class="form-control" placeholder="Contraseña" name="ClPassword" type="password" >
+                                            <input class="form-control" placeholder="Contraseña" name="ClPassword1" type="password">
                                         </div>
                                         <br>
-                                        <div class="input-group">
+                                        <div class="input-group form-login">
                                             <span class="input-group-addon back-vt">
                                                 <i class="fa fa-unlock-alt color-white"></i>
                                             </span>
-                                            <input class="form-control" placeholder="Confirmar Contraseña" name="ClPasswordConf" type="password" > 
+                                            <input class="form-control" placeholder="Confirmar Contraseña" name="ClPassword2" type="password" > 
                                         </div>
                                         <br>
                                         <div class="input-group">

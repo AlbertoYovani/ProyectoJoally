@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $('body').on('click','.avisoderegistro',function () {
         bootbox.dialog({
-            
             title:'Realizar un pedido',
             message:'<div class="row">'+
                         '<div class="col-md-11">'+

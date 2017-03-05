@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="titles">
-                        <h2><span style="color: #F00001 !important">JOALLY ARREGLOS FRUTALES</span></h2>
+                        <h2><span style="color: #F00001 !important; font-size: 40px !important">JOALLY ARREGLOS FRUTALES</span></h2>
                         <hr class="tall">
                     </div>                    
                 </div>
@@ -22,7 +22,7 @@
                     <div class="img-hover">
                         <img src="<?=$res['imagen']?>" alt="" class="img-responsive" style="width: 470px !important; height: 380px !important">
                         <div class="overlay">
-                            <a href="<?=$res['imagen']?>" class="fancybox"><i class="fa fa-plus-circle"></i></a>
+                            <a href="<?=$res['imagen']?>" class="fancybox"><i class="fa fa-plus-circle "></i></a>
                         </div>
                     </div>
                     <div class="info-gallery">

@@ -14,15 +14,15 @@
                 <hr class="tall">
                 <!-- Nav Filters -->
                 <div class="portfolioFilter">
-                    <a href="#" data-filter="*" class="current losp">TODOS</a>
-                    <a href="#" data-filter=".beach" class="losp">SIN CHOCOLATE</a>
-                    <a href="#beach" data-filter="*" class="losp">CON CHOCOLATE</a>
-                    <a href="#nature" data-filter=".nature" class="losp">EXTRA-CHOCOLATE</a>
+                    <a href="#" data-filter="todos" class="current losp">TODOS</a>
+                    <a href="#" data-filter="sch" class="losp">SIN CHOCOLATE</a>
+                    <a href="#beach" data-filter="ch" class="losp">CON CHOCOLATE</a>
+                    <a href="#nature" data-filter="extch" class="losp">EXTRA-CHOCOLATE</a>
                 </div>
                 <div class="portfolioContainer">
                     <?php
                         require_once 'conexion.php';
-                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo");
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo, tamanio WHERE tamanio.arreglo_id=arreglo.id");
                         while($res= mysqli_fetch_array($sql)){ ?>
                     <!--Es es un arreglo para pedir-->
                         <div class="col-xs-12 col-sm-6 col-md-3 nature">

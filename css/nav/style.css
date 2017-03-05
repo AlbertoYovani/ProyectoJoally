@@ -188,7 +188,7 @@
 }
 /*Hover del muñequito de logueo*/
 .flat-mega-menu .login-form:hover{
-	background-color: #FFFFFF;
+	background-color: #01DF01;
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 	-moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -210,7 +210,7 @@
 }
 /*Define el hover cuando pasamos el corsor sobre el icono de buscar*/
 .flat-mega-menu .search-bar:hover{
-	background-color: #FFFFFF;
+	background-color: #01DF01;
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 	-moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -267,7 +267,7 @@
 
 /* Menu Hover */
 .flat-mega-menu > ul > li:hover > a {
-	background: #FFFFFF; /*COlor al que cambia cuando pasa el cursor sobre esa opcion*/
+	background: #01DF01; /*COlor al que cambia cuando pasa el cursor sobre esa opcion*/
         
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -285,7 +285,7 @@
 /*------- Drop down layout start ------*/
 .flat-mega-menu .drop-down {
 	position: absolute;
-	background: #FFFFFF;
+	background: #FFFFFF; /*Colo de los bordes de el menu desplegable*/
 	z-index: 999;
 	margin-left: 0px;
 	width: 100%;
@@ -323,8 +323,9 @@
 
 /* drop down hover animation */
 .flat-mega-menu .drop-down li:hover > a {
-	color: #000000;
+	color: #FFFFFF;
 	padding-left: 30px;
+        background-color: #01DF01; /*Color del hover en la parte del menu desplegable*/
 }
 
 /* default hover animation to show drop down */

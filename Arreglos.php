@@ -1,37 +1,35 @@
-<?php include'./include/headerR.php';?>
+<?php 
+    include'./include/headerR.php';
+    require_once 'conexion.php';
+?>
 <br><br><br><br><br><br><br><br>
 <div class="content-central"><br><br><br><br>
-    <!-- Shadow Semiboxed -->
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
-    <!-- End Shadow Semiboxed -->
-
-    <!-- End content info - page Fill with -->
     <div class="content_info">
         <div class="container">
             <div class="row">
-                <!-- Grid Elements-->
                 <div class="col-md-12">
-                    <!-- Title Results-->
                     <div class="title-results">
                         <h2 class="losp">ARREGLOS MÁS BUSCADOS</h2>
                     </div>
                     <div class="row">
-                        <!-- Item Gallery-->
-                        <?php for ($i = 1; $i < 11; $i++) {?>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <?php
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo,tamanio WHERE tamanio.arreglo_id=arreglo.id");
+                        while($res = mysqli_fetch_array($sql)){ ?>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
                             
                             <div class="img-hover">
-                                <img src="img/arreglos/img2.png" alt="" class="img-responsive">
-                                <div class="overlay"><a href="img/arreglos/img2.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                <img src="<?=$res['imagen']?>" alt="" class="img-responsive" style="width: 430px !important; height: 340px !important">
+                                <div class="overlay"><a href="<?=$res['imagen']?>" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                             </div>
                             <div class="info-gallery">
                                 <h3>
-                                    Sabor chocolate mexicano<br>
+                                    <?=$res['nombre'] ?><br>
                                 </h3>
-                                <div class="content-btn"><a class="btn btn-primary avisoderegistro">Pedir</a></div>
-                                <div class="price"><span>$</span><b>Desde</b>45</div>
+                                <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="<?=$res['id']?>">Agregar a Carrito</a></div>
+                                <div class="price"><span>$</span><b>Desde</b><?=$res['precio']?></div>
                             </div>
                             
                         </div>
@@ -44,3 +42,4 @@
 </div>
       
 <?php include'./include/footer.php';?>
+<script src="js/Arreglos.js?<?= md5(microtime())?>"></script>

@@ -32,9 +32,11 @@
                         <i class="fa fa-bars"></i>
                     </label>
                     <input id="mobile-button" type="checkbox"> 
+                    
                     <ul class="collapse">
+                        
                         <li class="title">
-                            <a>  <span>J</span>OALLY ARREGLOS FRUTALES</a>
+                            <a><span>J</span>OALLY ARREGLOS FRUTALES</a>
                         </li>
                         <li>
                             <a href="index.php">INICIO</a>
@@ -48,46 +50,18 @@
                         <li> 
                             <a href="Arreglos.php">ARREGLOS</a>
                         </li>
-                        <li class="login-form">
+                        <li> 
+                            <a href="PedidosTemp.php">MIS PEDIDOS</a>
+                        </li>
+                        <li class="inisiosesion fa fa-user pointer-icono login-form" style="font-size: 16px !important;margin-right: -60px !important; margin-left: 30px !important;">  Iniciar Sesión</li>
+                        <li class="login-form" onclick="window.location.href='PedidosTemp.php'">
                             <div >
-                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
+                                <i class="fa fa-shopping-cart" style="font-size: 22px;margin-top: 20px" ></i>
                                 <div style="top: 5px;right: -5px;position: absolute;background: white;color: black;border-radius: 50%; width: 25px;height: 25px;">
                                     <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>
                             </div>
-                            
                         </li>
-                        <li class="login-form"> 
-                            <i class="fa fa-user" style="font-size: 22px;"></i>
-                            <ul class="drop-down hover-expand">
-                                <li>
-                                    <form method="POST" action="login.php" class="form-login">
-                                        <table>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="text" required="required" name="usuario" placeholder="Usuario"> 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"> 
-                                                    <input type="password" required="required" name="ClPassword" placeholder="Contraseña"> 
-                                                </td>
-                                            </tr>
-                                            <tr class="login-error" style="color: #FF0000; height: 100%; width: 150px !important">
-                                            </tr><br><br>
-                                            <tr >
-                                                <td> 
-                                                    <input type="submit" value="Ingresar" > 
-                                                </td>
-                                                <td> 
-                                                    <input type="button" onclick="location.href='RegistraCliente.php'" value="Registrar" style="background-color: #F33131; color: #FEFBFB; font-size: 16px !important; height: 38px ; width: 100px; border-radius: 4px !important"> 
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>          
                     </ul>
                 </nav>
             </header>

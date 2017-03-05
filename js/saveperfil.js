@@ -1,21 +1,10 @@
 $(document).ready(function (){
-    $('.html5imageupload').html5imageupload({
-        onAfterProcessImage: function() {
-                $('#filename').val($(this.element).data('name'));
-        },
-        onAfterCancel: function() {
-                $('#filename').val('');
-        }
-    });
-
-    $('#save').html5imageupload({
-        onSave: function(data) {
-                console.log(data);
-        },
-    });
     $('#nuevo_registro').submit(function (e) {
         e.preventDefault();
-        $.ajax({
+        var ClPassword1=$('input[name=ClPassword1]').val();
+        var ClPasswordConf=$('input[name=ClPassword2]').val();
+        if(ClPassword1 === ClPasswordConf){
+           $.ajax({
             url: "controlador/NuevoCliente.php",
             type: 'POST',
             dataType: 'json',
@@ -25,13 +14,18 @@ $(document).ready(function (){
             },success: function (data, textStatus, jqXHR) {
                 console.log(data)
                 if(data.accion=='1'){
-                    alert('REGISTRO GUARDADO');
-                    location.href= 'index.php';
+                        msj_success_noti("Registro Guardado");
+                    location.href= 'PrincipalArreglos.php';
                 }
             },error: function (e) {
                 console.log(e);
             }
         })
+        
+        }else{
+            msj_error_noti("¡Las contraseñas no coinciden!"); 
+        }
+        
     })
 })
 
