@@ -55,15 +55,7 @@
                         <li class="title">
                             <a>  <span>J</span>OALLY ARREGLOS FRUTALES<span></span></a>
                         </li>
-                        <!-- End website title - Logo class -->
-                        
-                        <li><a>ARREGLOS</a><ul class="drop-down one-column hover-fade" style="background-color:#F00001 !important"><!-- first level drop down -->
-                                <li><a href="PrincipalArreglos.php">CUMPLEAÑOS</a> </li>
-                                <li><a href="PrincipalArreglos.php">XV AÑOS</a> </li>
-                                <li><a href="PrincipalArreglos.php">BODAS</a> </li>
-                                <li><a href="PrincipalArreglos.php">BAUTIZOS</a> </li>
-                                <li><a href="PrincipalArreglos.php">TODOS</a> </li>
-                            </ul>
+                        <li><a href="PrincipalArreglos.php">ARREGLOS</a>
                         </li>
                         <li><a href="MiCuenta.php">MI CUENTA</a></li>
                         
@@ -72,8 +64,8 @@
                         <li class="login-form " ><!-- login form -->
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
-                                <li >
-                                    <a href="logout.php" style="font-size: 16px;">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
+                                <li style="background: #FFFFFF !important">
+                                    <a href="logout.php" style="font-size: 16px; background: #FFFFFF !important; color: #000000">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
                                 </li>
                             </ul>
                         </li>
@@ -84,7 +76,6 @@
                                     <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>
                             </div>
-                            
                         </li>
                         <li class="search-bar"> 
                             <i class="fa fa-search " style="font-size: 22px;margin-top: 20px"></i><!-- search bar -->

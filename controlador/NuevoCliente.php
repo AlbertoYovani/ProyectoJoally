@@ -20,6 +20,7 @@ include '../conexion.php';
     $sqlmax = mysqli_query(ConexionBd(),"SELECT MAX(id) AS max_id FROM cliente");
     $max_id=$sqlmax->fetch_assoc();
     $id_user=$max_id['max_id'];
+    $_SESSION['nuevo_usuario']=$id_user;
     $cuenta = mysqli_query(ConexionBd(), 
             "INSERT INTO cuenta (id,
                                 idCliente,
@@ -32,8 +33,6 @@ include '../conexion.php';
     if(isset($_SESSION['cliente_tmp'])){
         $sql = mysqli_query(ConexionBd(), "UPDATE jy_pedidos_tmp SET cliente_id =".$max_id['max_id']." WHERE  cliente_tmp=".$_SESSION['cliente_tmp']);
     }
-        
-    
     if($cliente and $cuenta){
         echo json_encode(array(
             'accion'=>'1'

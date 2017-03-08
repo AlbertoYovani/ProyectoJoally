@@ -62,4 +62,4 @@
 </div>
 
 <?php include'./include/footer.php';?>
-        
+<script src="js/Arreglos.js?<?= md5(microtime())?>"></script>        

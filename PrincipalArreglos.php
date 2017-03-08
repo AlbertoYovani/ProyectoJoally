@@ -14,7 +14,7 @@
                 <hr class="tall">
                 <!-- Nav Filters -->
                 <div class="portfolioFilter">
-                    <a href="#" data-filter="todos" class="current losp">TODOS</a>
+                    <a href="" data-filter="todos" class="current losp">TODOS</a>
                     <a href="#" data-filter="sch" class="losp">SIN CHOCOLATE</a>
                     <a href="#beach" data-filter="ch" class="losp">CON CHOCOLATE</a>
                     <a href="#nature" data-filter="extch" class="losp">EXTRA-CHOCOLATE</a>
@@ -32,7 +32,6 @@
                         </div>
                             <div class="info-gallery" style="background: transparent">
                             <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="<?=$res['id']?>">Agregar a Carrito</a></div>
-                            <div class="price"><span>$</span><?=$res['precio'] ?>.00</div>
                         </div>
                     </div>
                     <?php } ?>

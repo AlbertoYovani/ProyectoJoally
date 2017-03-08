@@ -25,7 +25,6 @@
                                 <tr>
                                     <th>Imagen</th>
                                     <th>Nombre</th>
-                                    <th>Categoria</th>
                                     <th>Precio</th>
                                     <th>Clasificación</th>
                                     <th>Tamaño</th>
@@ -45,7 +44,13 @@
                         </table>
                     </div>
                 </div>
-               
+               <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="PrincipalArreglos.php">Pedir más...</a>
+                    </div>
+                </div>
+               <br>
                <div class="row">
                     <div class="col-md-3">
                         <span class="input-group-btn">
@@ -59,27 +64,6 @@
                     </div>
                 </div>
                 <br>
-                <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="PrincipalArreglos.php">Pedir más...</a>
-                        <br>
-                        <br>
-                        <table class="table table-bordered ">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Total
-                                    </th>
-                                    <th style="width: 200px !important">
-                                         $ 1200.00
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-               
             </div>
             <hr class="tall">
             <input type="hidden" name="Tabla" value="Pedidos">

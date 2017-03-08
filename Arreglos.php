@@ -29,7 +29,7 @@
                                     <?=$res['nombre'] ?><br>
                                 </h3>
                                 <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="<?=$res['id']?>">Agregar a Carrito</a></div>
-                                <div class="price"><span>$</span><b>Desde</b><?=$res['precio']?></div>
+                                <div class="price"><span></span><b>Disponible</b></div>
                             </div>
                             
                         </div>

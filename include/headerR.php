@@ -1,3 +1,4 @@
+<?php  session_start();?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -48,6 +49,7 @@
                         <li> <a href="Arreglos.php">ARREGLOS</a></li>
                         
                         <li><a href="PedidosTemp.php">MIS PEDIDOS</a></li>
+                        <li class="inisiosesion fa fa-user pointer-icono login-form" style="font-size: 16px !important;margin-right: -60px !important; margin-left: 30px !important;">  Iniciar Sesión</li>       
                         <li class="login-form">
                             <div >
                                 <i class="fa fa-shopping-cart" style="font-size: 22px; margin-top: 20px" onclick="window.location.href='MisPedidos.php'"></i>
@@ -55,11 +57,7 @@
                                     <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>
                             </div>
-                            
                         </li>
-                        <li class="login-form inisiosesion"> 
-                            <i class="fa fa-user" style="font-size: 22px;"></i>
-                        </li>          
                     </ul>
                 </nav>
                 <!-- Main Nav -->

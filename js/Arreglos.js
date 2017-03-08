@@ -1,32 +1,36 @@
 $(document).ready(function(){
     $('body').on('click','.inisiosesion',function () {
         bootbox.dialog({
-                    title:'Iniciar Sesión',
-                    message:'<div class="row" style="height:230px !important;">'+
-                                '<div class="col-md-12 col-centered">'+
+                    message:'<div class="row" style="height:50px !important;margin-top: -0px !important">'+
+                                '<div class="col-md-12 col-centered" style="text-align:center;"><h3 style="color:red !important">Iniciar Sesión</h3></div></div>'+
+                            '<div class="row" style="height:300px !important">'+
+                                '<div class="col-md-12 col-centered form-login">'+
+                                    '<br>'+
                                     '<div class="form-group">'+
                                         '<div class="input-group">'+
                                             '<span class="input-group-addon" style="background: #F00001;color: white;border: none">'+
                                                 '<i class="fa fa-user"></i>'+
                                             '</span>'+
-                                            '<input type="text" class="form-control" placeholder="Usuario">'+
+                                            '<input name="usuario" type="text" class="form-control" placeholder="Usuario">'+
                                         '</div>'+
-                                    '</div>'+
+                                    '</div><br>'+
                                     '<div class="form-group">'+
                                         '<div class="input-group">'+
                                             '<span class="input-group-addon" style="background: #F00001;color: white;border: none">'+
                                                 '<i class="fa fa-unlock-alt"></i>'+
                                             '</span>'+
-                                            '<input type="text" class="form-control" placeholder="Usuario">'+
+                                            '<input name="ClPassword1" type="password" class="form-control" placeholder="Contraseña">'+
                                         '</div>'+
-                                    '</div>'+
+                                    '<div class="form-error" style="color:red; font-size:14px !important"></div>'+    
+                                    '</div><br>'+
                                     '<div class="form-group">'+
                                         '<label>'+
-                                            '<a href="#" > ¿Tienes una Cuenta? Registrarme</a>'+
+                                            '¿Tienes una Cuenta?<a href="RegistraCliente.php"> Registrarme</a>'+
                                         '</label>'+
                                     '</div>'+
+                                    '<br>'+
                                     '<div class="form-group">'+
-                                        '<button class="btn btn-primary btn-block">Iniciar Sesión</button>'+
+                                        '<button class="btn btn-primary btn-block InicioSesion">Iniciar Sesión</button>'+
                                     '</div>'+
                                 '</div>'+
                             '</div>',
@@ -36,7 +40,9 @@ $(document).ready(function(){
             ,onEscape:function(){}
         });
     })
-    $('body').on('click','.sdsd',function () {
+    $('body').on('click','.InicioSesion',function () {
+        var usuario=$('body input[name=usuario]').val();
+        var ClPassword1=$('body input[name=ClPassword1').val();
         $.ajax({
             url: "controlador/Arreglos.php",
             type: 'POST',
@@ -44,14 +50,17 @@ $(document).ready(function(){
             data:{
                 usuario:usuario,
                 ClPassword1:ClPassword1,
-                accion:'InisioSesion'
+                accion:'IniciarSesion'
             },beforeSend: function (xhr) {
             },success: function (data, textStatus, jqXHR) {
-                if(data.accion=='1'){
+                if(data.accion==='1'){
+                    bootbox.hideAll();
+                    msj_loading();
                     alert("Bienvenido");
                     location.href= 'PrincipalArreglos.php';
-                }if(data.accion='2'){
-
+                }if(data.accion==='2'){
+                    $('.form-error').html('El Usuario y/o Contraseña no existe');
+                    $('.form-login')[0].reset(); 
                 }
             },error: function (e) {
                 console.log(e)
@@ -79,8 +88,9 @@ $(document).ready(function(){
                     title:'<h5 style="color:white!important;padding-bottom: 2px!important">Realizar mi Pedido</h5>',
                     message:'<div class="row">'+
                                 '<div class="col-md-6">'+
-                                    '<img src="'+data.ArregloImagen+'" style="width:100%">'+
+                                    '<img src="'+data.ArregloImagen+'" style="width:80%">'+
                                 '</div>'+
+                                '<br>'+
                                 '<div class="col-md-6">'+
                                     '<div class="form-group">'+
                                         '<div class="input-group">'+
@@ -88,15 +98,12 @@ $(document).ready(function(){
                                             '<input disabled="true" type="text" class="form-control" value="'+data.ArregloNombre+'">'+
                                         '</div>'+
                                     '</div>'+
+                                    '<br>'+
                                     '<div class="form-group" style="font-size:15px;line-height:1.2; color: #6f6f6f !important">'+
                                         '<label style="color: #6f6f6f !important">Decripción: </label>'+data.ArregloDescripcion+
                                     '</div>'+
-                                    '<div class="form-group">'+
-                                        '<div class="input-group">'+
-                                            '<div class="input-group-addon" style="background: transparent;border: 1pxtransparent!important: ">Precio</div>'+
-                                            '<input disabled="true" type="text" class="form-control" value="'+data.ArregloPrecio+'">'+
-                                        '</div>'+
-                                    '</div>'+
+                                    '<br>'+
+                                    '<br>'+
                                     '<div class="form-group">'+
                                         '<div class="input-group">'+
                                             '<div class="input-group-addon" style="background: transparent;border: 1pxtransparent!important: ">Cantidad</div>'+
@@ -134,6 +141,7 @@ $(document).ready(function(){
                                                 msj_success_noti('Arreglos Agregados');
                                                 bootbox.hideAll();
                                                 TotalArreglos();
+                                                window.location='PedidosTemp.php';
                                             }
                                         },error: function (e) {
                                             console.log(e)

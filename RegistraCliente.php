@@ -97,5 +97,6 @@
 </section>
 
 <?php include './include/footer.php';?>
-<script type="text/javascript" src="js/html5imageupload/html5imageupload.js"></script>
 <script type="text/javascript" src="js/saveperfil.js?<?= md5(microtime())?>"></script>
+<script type="text/javascript" src="js/Arreglos.js?<?= md5(microtime())?>"></script>
+
