@@ -65,7 +65,7 @@
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
                                 <li style="background: #FFFFFF !important">
-                                    <a href="logout.php" style="font-size: 16px; background: #FFFFFF !important; color: #000000">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
+                                    <a href="logout.php" style="font-size: 14px; background: #FFFFFF !important; color: #000000">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
                                 </li>
                             </ul>
                         </li>
@@ -76,21 +76,6 @@
                                     <div style="position: absolute;left: 0px;right: 0px;top: -17px;font-weight: bold" class="cantidad-productos">0</div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="search-bar"> 
-                            <i class="fa fa-search " style="font-size: 22px;margin-top: 20px"></i><!-- search bar -->
-                            <ul class="drop-down hover-expand">
-                                <li>
-                                    <form method="post" action="#">
-                                        <table>
-                                            <tr>
-                                                <td> <input type="search" required="required" name="serach_bar" placeholder="Buscar..."> </td>
-                                                <td> <input type="submit" value="Buscar"> </td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </nav>

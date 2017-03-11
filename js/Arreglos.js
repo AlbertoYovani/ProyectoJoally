@@ -56,7 +56,6 @@ $(document).ready(function(){
                 if(data.accion==='1'){
                     bootbox.hideAll();
                     msj_loading();
-                    alert("Bienvenido");
                     location.href= 'PrincipalArreglos.php';
                 }if(data.accion==='2'){
                     $('.form-error').html('El Usuario y/o Contraseña no existe');
@@ -73,13 +72,15 @@ $(document).ready(function(){
     
     $('body').on('click','.ver-arreglo',function () {
         var id=$(this).attr('data-id');
+        var filter = $(this).attr("filter");
         $.ajax({
             url: "controlador/Arreglos.php",
             type: 'POST',
             dataType: 'json',
             data:{
                 id:id,
-                accion:'ver_detalles'
+                filter:filter,
+                accion:'ver_detalles',
             },beforeSend: function (xhr) {
                 msj_loading();
             },success: function (data, textStatus, jqXHR) {
@@ -459,4 +460,24 @@ $(document).ready(function(){
             ,onEscape:function(){}
         });
     })
+    $('.query').click(function(){
+            var filter = $(this).attr("id");
+            
+            $.ajax({
+                url: "controlador/Arreglos.php",
+                type: 'POST',
+                data:{
+                    filter:filter,
+                    accion:'filtrado'
+                },beforeSend: function (xhr) {
+                    $('.loading-arreglos').removeClass('hide');
+                },success: function (data, textStatus, jqXHR) {
+                    $('.loading-arreglos').addClass('hide');
+                    $('#contenido').html(data);
+                },error: function (e) {
+                    console.log(e)
+                    msj_error_serve();
+                }
+            })
+    });
 })

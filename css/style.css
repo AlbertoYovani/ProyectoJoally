@@ -49,7 +49,7 @@ body{
 h1, h2, h3, h4, h5, h6 {	
 	padding: 5px 0 15px 0;	
 	margin: 0;	
-	color: #01DF01;
+	color: #FE2E9A;
 	font-weight: normal;
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -169,7 +169,7 @@ ul.single-carousel,
 	background-color: #fcfcfc;
 }
 .bg-dark{
-	background-color: #3a4749;
+	background-color:#3A4749; /* #3A4749 #FA5882 rosita*/
 }
 .borders{
 	border-top: 1px solid #dfdfdf;

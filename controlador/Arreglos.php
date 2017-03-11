@@ -29,18 +29,24 @@
     if($_POST['accion']=='ver_detalles'){
         error_reporting(0);
         $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo WHERE id=".$_POST['id']);
+        
+       
         $result= mysqli_fetch_array($sql,MYSQLI_ASSOC);
         echo json_encode(array(
             'accion'=>'1',
             'ArregloId'=>$result['id'],
             'ArregloNombre'=> $result['nombre'],
             'ArregloTamanio'=> utf8_encode($result['clasificacion']),
-            'ArregloImagen'=> utf8_encode($result['imagen']) ,
+            'ArregloImagen'=> utf8_encode($result['imagen']),
             'ArregloDescripcion'=> utf8_encode($result['descripcion']),
             'Clasificaciones'=> utf8_encode($option),
         ));
     }
     if($_POST['accion']=='AgregarArreglo'){
+        $filter = $_POST['filter'];
+        if($filter ==0){
+            $filter='';
+        }
         if(isset($_SESSION['cliente_tmp'])){
             $cliente_tmp=$_SESSION['cliente_tmp'];
         }else{
@@ -55,7 +61,7 @@
         for ($index = 1; $index <= $pedidos_cantidad; $index++) {
            $sql= mysqli_query(ConexionBd(), "INSERT INTO jy_pedidos_tmp (pedidos_id,pedidos_fecha,pedidos_hora,
                 cliente_id,cliente_tmp,arreglo_id,clasificacion_id,tamanio_id,dedicatoria) 
-                VALUES (0,'$pedidos_fecha','$pedidos_hora',0,$cliente_tmp,$arreglo_id,0,0,'')");
+                VALUES (0,'$pedidos_fecha','$pedidos_hora',0,$cliente_tmp,$arreglo_id,0,$filter,'')");
            if(isset($_SESSION['CUENTA_ID'])){ /*Valida si el cliente ya inicio sesion, le asigna su ID*/
             $sql = mysqli_query(ConexionBd(), "UPDATE jy_pedidos_tmp SET cliente_id =".$_SESSION['CLIENTE_ID']." WHERE  cliente_tmp=".$_SESSION['cliente_tmp']);
             }
@@ -227,6 +233,32 @@
         }else{
             echo json_encode(array('accion'=>'2'));
         }
+    }
+    if($_POST['accion']=='filtrado'){
+        $categoria = $_POST['filter'];
+        if($categoria!=0){
+            $query= "SElECT * FROM jy_clasificacion,arreglo,jy_arreglo_clasificacion WHERE
+                            jy_arreglo_clasificacion.arreglo_id= arreglo.id AND
+                            jy_arreglo_clasificacion.clasificacion_id= jy_clasificacion.clasificacion_id AND
+                            jy_arreglo_clasificacion.clasificacion_id='.$categoria.'";
+        }else if($categoria==0){
+            $query="select * from arreglo";
+        }
+        $result = mysqli_query(ConexionBd(), $query); 
+           $output = '';
+           while ($row = mysqli_fetch_array($result)){            
+                $output.='
+                    <div class="col-xs-12 col-sm-6 col-md-3 nature">
+                        <div class="img-hover">
+                            <img src="'.$row['imagen'].'" alt="" class="img-responsive" style="width: 300px !important;height: 300px !important">
+                            <div class="overlay"><a href="'.$row['imagen'].'" class="fancybox" ><i class="fa fa-plus-circle"></i></a></div>
+                        </div>
+                            <div class="info-gallery" style="background: transparent">
+                            <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="'.$row['id'].'">Agregar a Carrito</a></div>
+                        </div>
+                    </div>' ;
+            }
+           echo $output;
     }
 
 
