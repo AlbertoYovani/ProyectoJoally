@@ -3,25 +3,28 @@
     include '../controlador/Funciones.php';
     session_start();
     if($_POST['accion']=='BUSCAR_ARREGLOS'){
-        $ARREGLO_NOMBRE=$_POST['arreglo_nombre'];
-        $ARREGLO_CLAS=$_POST['arreglo_clasificacion'];
-        $ARREGLO_TAM=$_POST['arreglo_tamanio'];
-        
-        if($ARREGLO_NOMBRE!=''){
+        $Valor=$_POST['Valor'];
+        $FILTRO_TIPO=$_POST['tipo_filtro'];
+        if($FILTRO_TIPO=='Nombre'){
             $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
                                         WHERE
                                         jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$ARREGLO_NOMBRE%'");
-        }if($ARREGLO_CLAS!=''){
+                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
+        }if($FILTRO_TIPO=='Clasificacion'){
             $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
                                         WHERE
                                         jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND  jy_clasificacion.clasificacion_id=$ARREGLO_CLAS");
-        }if($ARREGLO_TAM!=''){
+                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND  jy_clasificacion.clasificacion_id=$Valor");
+        }if($FILTRO_TIPO=='Tamaño'){
             $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
                                         WHERE
                                         jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$ARREGLO_NOMBRE%'");
+                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
+        }if($FILTRO_TIPO=='General'){
+            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
+                                        WHERE
+                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
+                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id ");
         }
         
         $col='';
