@@ -5,7 +5,7 @@
                 <div class="opacy_bg_02">
                      <div class="container">
                          <br><br><br><br>
-                         <img src="img/logo.png" style="width: 210px; height: 210px;">
+                         <img src="img/logo.png" style="width: 250px; height: 210px;">
                     </div>  
                 </div>  
             </div><br><br>
@@ -15,25 +15,46 @@
                     <img src="" class="img-responsive" alt="">
                 </div>
                 <div class="content_info">
-                    <?php 
-                        
-                    
-                    
-                    ?>
                     <div class="content-boxes">
+                    <?php
+                        require_once 'conexion.php';
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo limit 2");
+                        while($res= mysqli_fetch_array($sql)){ ?>
                         <div class="item-boxed">
                             <div class="image-boxed">
                                 <span class="overlay"></span>
-                                <img src="img/arreglos/img2.png" alt="" style="width: 300px; height: 300px;">
+                                <img src="<?=$res['imagen']?>" alt="" style="width: 300px; height: 300px;">
                                 <a href="hotel-detailed.html" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
                             </div>
                             <div class="info-boxed boxed-top">
                                 <h3>
-                                    Hot Baloon Special Journey<br>
-                                    <span>DPM, CBE, TAMILNADU</span>
+                                    <?=$res['nombre']?> <br>
+                                    <span>Diferentes tamaños</span>
                                 </h3>
                                 <hr class="separator">
-                                <p>The Royal National is in London near Covent Garden.</p>
+                                <p><?= substr($res['descripcion'],0,55)?>...</p>
+                                <ul class="starts">
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                </ul>
+                                <div class="content-btn"><a href="Detalle.php" class="btn btn-primary">Ver Detalles</a></div>
+                            </div>
+                        </div>
+                    <?php } 
+                        require_once 'conexion.php';
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.id > 10 limit 2");
+                        while($res= mysqli_fetch_array($sql)){ ?>
+                        <div class="item-boxed">
+                            <div class="info-boxed boxed-bottom">
+                                <h3>
+                                    <?=$res['nombre']?><br>
+                                    <span>Diferentes tamaños</span>
+                                </h3>
+                                <hr class="separator">
+                                <p><?= substr($res['descripcion'],0,55)?>...</p>
                                 <ul class="starts">
                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
@@ -43,85 +64,14 @@
                                 </ul>
                                 <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">Ver Detalles</a></div>
                             </div>
-                        </div>
-                        <!-- End Item-boxe-->
-
-                        <!-- Item-boxe-->
-                        <div class="item-boxed">
-                            <div class="image-boxed">
-                                <span class="overlay"></span>
-                                <img src="img/arreglos/img2.png" alt="" style="width: 300px; height: 300px;">
-                                <a href="hotel-detailed.html" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
-                            </div>
-                            <div class="info-boxed boxed-top">
-                                <h3>
-                                    The Grand Canyons<br>
-                                    <span>PEELAMEDU, CBE, INDIA</span>
-                                </h3>
-                                <hr class="separator">
-                                <p>The Holiday Inn Bilbao is in a prime location next to the Basilica of Begoña.</p>
-                                <ul class="starts">
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                </ul>
-                                <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">View Details</a></div>
-                                <div class="price"><span>$</span> 65</div>
-                            </div>
-                        </div>
-                        <div class="item-boxed">
-                            <div class="info-boxed boxed-bottom">
-                                <h3>
-                                    Weekdays in Thailand<br>
-                                    <span>PEELAMEDU, CBE, INDIA</span>
-                                </h3>
-                                <hr class="separator">
-                                <p>The spacious rooms have a bathroom with hairdryer, direct dial telephone.</p>
-                                <ul class="starts">
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                </ul>
-                                <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">View Details</a></div>
-                                <div class="price"><span>$</span> 30</div>
-                            </div>
                             <div class="image-boxed image-bottom">
                                 <span class="overlay"></span>
-                                <img src="img/arreglos/img2.png" alt="" style="width: 300px; height: 300px;">
+                                <img src="<?=$res['imagen']?>" alt="" style="width: 300px; height: 300px;">
                                 <a href="hotel-detailed.html" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
+                        <?php } ?>
                         <!-- End Item-boxe-->
-
-                        <!-- Item-boxe-->
-                        <div class="item-boxed">
-                            <div class="info-boxed boxed-bottom">
-                                <h3>
-                                    Peek Mountain View<br>
-                                    <span>LAS VEGAS, NEVADA</span>
-                                </h3>
-                                <hr class="separator">
-                                <p>The Golden Bay, heated and opened in 2003, with a total of 380 rooms.</p>
-                                <ul class="starts">
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                </ul>
-                                <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">View Details</a></div>
-                                <div class="price"><span>$</span> 80</div>
-                            </div>
-                            <div class="image-boxed image-bottom">
-                                <span class="overlay"></span>
-                                <img src="img/arreglos/img2.png" alt="" style="width: 300px; height: 300px;">
-                                <a href="hotel-detailed.html" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
-                            </div>
-                        </div>
                     </div>
                 </div>   
                 <br>
@@ -236,54 +186,17 @@
                                 <!-- Services Items -->
                                 <div class="col-md-8">
                                     <ul class="services-lines">
+                                    <?php
+                                    require_once 'conexion.php';
+                                    $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.id < 13 limit 8");
+                                    while($res= mysqli_fetch_array($sql)){ ?>    
                                         <li>
                                             <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Ocasiones Especiales</h5>
+                                                <img src="<?=$res['imagen'] ?>" style="width: 80px; height: 80px;">
+                                                <h5 style="color:#FA5882 !important;"><?=$res['nombre']?></h5>
                                             </div>
                                         </li>
-                                         <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Momentos inolvidables</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Reuniones unicas</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Dias de amor</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Bellos momentos</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Logros</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Un bello momento</h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item-service-line">
-                                                <img src="img/arreglos/img2.png" style="width: 80px; height: 80px;">
-                                                <h5>Fechas unicas</h5>
-                                            </div>
-                                        </li>
+                                    <?php } ?>
                                     </ul>
                                 </div> 
                                 <!-- End Services Items --> 
