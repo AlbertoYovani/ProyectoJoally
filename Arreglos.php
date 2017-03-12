@@ -7,18 +7,40 @@
     <div class="opacy_bg_02">
          <div class="container">
             <h1>Arreglos Frutales</h1>
-            <div class="crumbs">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li>/</li>
-                    <li>Arreglos Frutales</li>    
-                </ul>    
-            </div>
         </div>  
     </div>
 </div>   
+<style>
+.scrollable{
+    
+    overflow-x: hidden!important;
+}
+/* Let's get this party started */
+.scrollable::-webkit-scrollbar {
+    width: 5px;
+    
+}
+ 
+/* Track */
+.scrollable::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+.scrollable::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.10); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.scrollable::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+</style>
 <!--Content Central -->
-<div class="content-central">
+<div class="content-central" style="    margin-top: -250px;">
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
@@ -26,12 +48,12 @@
         <div class="container">
             <div class="row">
                 <!-- Left Sidebar-->
-                <div class="col-md-3">
-                    <div class="container-by-widget-filter bg-dark color-white">
-                        <aside class="widget padding-top-mini">
+                <div class="col-md-3 ">
+                    <div class="container-by-widget-filter bg-dark color-white col-filtro">
+                        <aside class="widget padding-top-mini ">
                             <h3 class="title-widget">Buscar Arreglos</h3>
-                            <div class="filter-widget">
-                                <input type="text" name="arreglo_nombre" placeholder="Nombre del Arreglo" class="input-large">
+                            <div class="filter-widget ">
+                                <input type="text" name="arreglo_nombre" placeholder="Nombre del Arreglo" >
                                 <div class="selector">
                                     <select class="guests-input" name="arreglo_clasficacion">
                                         <option value="1" selected="">Sin Chocolate</option>
@@ -40,7 +62,7 @@
                                     </select>
                                     <span class="custom-select">Por Clasificación</span>
                                 </div>
-                                <div class="selector">
+                                <div class="selector hide">
                                     <select class="guests-input" name="arreglo_tamanio">
                                         <?php 
                                         $Tam= mysqli_query(ConexionBd(), "SELECT * FROM tamanio GROUP BY tamanio.tamanio_nombre");
@@ -51,27 +73,16 @@
                                     <span class="custom-select">Por Tamaño</span>
                                 </div>
                             </div>
+                        </aside>
                             <!-- END FILTER widget-->
-                        </aside><br><br><br><br><br>
                     </div>
                 </div>
                 <!-- End Left Sidebar-->
 
-                <div class="col-md-9">
-                    <!-- sort-by-container-->
-                    <div class="sort-by-container tooltip-hover">
-                        <div class="row"></div>
-                    </div>
-                    <div  class="row col-buscando-arreglos hide">
-                        <div class="col-md-12" style="margin-top: calc(15%)">
-                            <center>
-                                <i class="fa fa-spinner fa-pulse fa-3x" style="color: #88C425 !important"></i><br>
-                                <h4>Bucando arreglos, espero por favor...</h4>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="row list-view row-list-arreglos">
-                    </div>
+                <div class="col-md-9 col-content">
+                    <br><br>
+                    <div class="row list-view row-list-arreglos scrollable" style="overflow-x: auto;height: 750px"></div>
+                    <br>
                 </div>
             </div>
         </div>
