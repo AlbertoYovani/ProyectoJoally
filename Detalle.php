@@ -85,7 +85,7 @@
                         <h3>Más arreglos</h3>
                         <?php
                         require_once 'conexion.php';
-                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo limit 13");
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo limit 14");
                         while($res= mysqli_fetch_array($sql)){ ?>
                         <h4></h4>
                         <a href="Arreglos.php">
