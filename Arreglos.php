@@ -9,7 +9,7 @@
             <h1>Arreglos Frutales</h1>
             <div class="crumbs">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li>/</li>
                     <li>Arreglos Frutales</li>    
                 </ul>    
