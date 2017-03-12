@@ -6,7 +6,7 @@
     <div class="bg_parallax image_04_parallax" style="background: url(img/fondo1.jpg);background-size: cover;background-position: center"></div>
     <div class="opacy_bg_02">
          <div class="container">
-            <h1>Arreglos Frutales</h1>
+            <h1><img src="img/logo.png" style="width: 250px; height: 210px;"></h1>
             <div class="crumbs">
                 <ul>
                     <li><a href="PrincipalArreglos.php">Principal</a></li>
@@ -17,6 +17,7 @@
         </div>  
     </div>
 </div>   
+<br><br><br><br><br>
 <!--Content Central -->
 <div class="content-central">
     <div class="semiboxshadow text-center">
