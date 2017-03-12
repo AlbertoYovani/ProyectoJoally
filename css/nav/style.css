@@ -188,7 +188,7 @@
 }
 /*Hover del muñequito de logueo*/
 .flat-mega-menu .login-form:hover{
-	background-color: #01DF01;
+	background-color: #FFFFFF;
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 	-moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -210,7 +210,7 @@
 }
 /*Define el hover cuando pasamos el corsor sobre el icono de buscar*/
 .flat-mega-menu .search-bar:hover{
-	background-color: #01DF01;
+	background-color: #FFFFFF;
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 	-moz-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -267,7 +267,7 @@
 
 /* Menu Hover */
 .flat-mega-menu > ul > li:hover > a {
-	background: #01DF01; /*COlor al que cambia cuando pasa el cursor sobre esa opcion*/
+	background: #FFFFFF; /*COlor al que cambia cuando pasa el cursor sobre esa opcion*/
         
 	/* animation */
 	transition: background 0.3s linear 0s, color 0.3s linear 0s;

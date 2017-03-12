@@ -12,15 +12,15 @@
             <section class="content-central">
                 <!-- Shadow Semiboxed -->
                 <div class="semiboxshadow text-center">
-                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                    <img src="" class="img-responsive" alt="">
                 </div>
-                <!-- End Shadow Semiboxed -->
-
-                <!-- End content info - Vacations Destinatios-->
                 <div class="content_info">
-                    <!-- content-boxes-->
+                    <?php 
+                        
+                    
+                    
+                    ?>
                     <div class="content-boxes">
-                        <!-- Item-boxe-->
                         <div class="item-boxed">
                             <div class="image-boxed">
                                 <span class="overlay"></span>
@@ -41,8 +41,7 @@
                                     <li><a href="#"><i class="fa fa-star"></i></a></li>
                                     <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
                                 </ul>
-                                <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">View Details</a></div>
-                                <div class="price"><span>$</span> 45</div>
+                                <div class="content-btn"><a href="hotel-detailed.html" class="btn btn-primary">Ver Detalles</a></div>
                             </div>
                         </div>
                         <!-- End Item-boxe-->
@@ -72,9 +71,6 @@
                                 <div class="price"><span>$</span> 65</div>
                             </div>
                         </div>
-                        <!-- End Item-boxe-->
-
-                        <!-- Item-boxe-->
                         <div class="item-boxed">
                             <div class="info-boxed boxed-bottom">
                                 <h3>
@@ -167,7 +163,7 @@
                                         Cumpleaños
                                     </h3>
                                     <hr class="separator">
-                                    <p>Los mejores arreglos frutales para una ocasión unica en la vida, disfrutalo acompañado de estos hermosos arreglos.</p>
+                                    <p>Para que sienta el afecto, porque no regalar un arreglo de frutas, muy ricos y frutas de temporada.</p>
                                     <div class="content-btn"><a href="#" class="btn btn-primary">Ver más</a></div>
                                 </div>
                             </div>
@@ -181,13 +177,14 @@
                                         XV años
                                     </h3>
                                     <hr class="separator">
-                                    <p>Los mejores arreglos frutales para una ocasión unica en la vida, disfrutalo acompañado de estos hermosos arreglos.</p>
+                                    <p>Para una fecha unica, un arreglo unico que acomapañe a esas grandes princesas en un gran día.</p>
                                     <div class="content-btn"><a href="#" class="btn btn-primary">Ver más</a></div>
                                 </div>
+                                
                             </div>
                             <div>
                                 <div class="img-hover">
-                                    <img src="img/slider/bautizos1.jpg" alt="" class="img-responsive" style="height: 206px !important;">
+                                    <img src="img/slider/bautizos1.jpg" alt="" class="img-responsive" style="height: 206px !important; width: 350px !important;">
                                     <div class="overlay"><a href="img/slider/bautizos1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                                 </div>
                                 <div class="info-gallery">
@@ -195,7 +192,7 @@
                                         Bautizos
                                     </h3>
                                     <hr class="separator">
-                                    <p>Los mejores arreglos frutales para una ocasión unica en la vida, disfrutalo acompañado de estos hermosos arreglos.</p>
+                                    <p>Para los pequeños gigantes, los que siempre disfrutan de algo delicioso, acompañalos con un buen regalo.</p>
                                     <div class="content-btn"><a href="#" class="btn btn-primary">Ver más</a></div>
                                 </div>
                             </div>
@@ -209,17 +206,14 @@
                                         Aniversarios
                                     </h3>
                                     <hr class="separator">
-                                    <p>Los mejores arreglos frutales para una ocasión unica en la vida, disfrutalo acompañado de estos hermosos arreglos.</p>
+                                    <p>La fecha más esperada, puede estar acompañada de un buen regalo de dulces colores y sabores en diferentes medidas.</p>
                                     <div class="content-btn"><a href="#" class="btn btn-primary">Ver más</a></div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End boxes-carousel-->
                     </div>
-                    <!-- End Info Resalt-->
                 </section> 
-                
-                <br><br>
+                <br>
                 <!-- End content info - Services Items-->
                 <div class="content_info">
                     <div class="bg-dark color-white border-top" style="background-color: #FA5882 !important;">
