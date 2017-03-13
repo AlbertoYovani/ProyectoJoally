@@ -6,6 +6,22 @@
 <div class="section-title-01">
     <div class="bg_parallax image_04_parallax" style="background: url(img/fondo1.jpg);background-size: cover;background-position: center"></div>
     <div class="opacy_bg_02">
+<<<<<<< HEAD
+=======
+         <div class="container">
+            <h1>Arreglos Frutales</h1>
+<<<<<<< HEAD
+            <div class="crumbs">
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li>/</li>
+                    <li>Arreglos Frutales</li>    
+                </ul>    
+            </div>
+=======
+>>>>>>> origin/master
+        </div>  
+>>>>>>> origin/master
     </div>
 </div>  
 <style>
@@ -72,7 +88,7 @@
 }
 </style>
 <!--Content Central -->
-<div class="content-central" style="    margin-top: -250px;">
+<div class="content-central" style="margin-top: -250px;">
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
@@ -109,8 +125,13 @@
 
                 <div class="col-md-9 col-content" >
                     <br><br>
+<<<<<<< HEAD
                     <div class="row list-view row-list-arreglos " style="height: 750px"></div>
                     <br><br><br>
+=======
+                    <div class="row list-view row-list-arreglos scrollable" style="overflow-x: auto;height:750px"></div>
+                    <br>
+>>>>>>> origin/master
                 </div>
             </div>
         </div>

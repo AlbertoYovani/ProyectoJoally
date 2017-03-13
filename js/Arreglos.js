@@ -30,7 +30,7 @@ $(document).ready(function(){
                                     '</div>'+
                                     '<br>'+
                                     '<div class="form-group">'+
-                                        '<button class="btn btn-primary btn-block InicioSesion">Iniciar Sesión</button>'+
+                                        '<button class="btn btn-primary btn-block InicioSesion" style="background-color:#F00001 !important">Iniciar Sesión</button>'+
                                     '</div>'+
                                 '</div>'+
                             '</div>',
