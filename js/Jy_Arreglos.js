@@ -29,12 +29,8 @@ $(document).ready(function (e) {
                 accion:'BUSCAR_ARREGLOS'
             },beforeSend: function (xhr) {
             },success: function (data, textStatus, jqXHR) {
-                //$('.row-list-arreglos').html(data.arreglos);
-                $('.row-list-arreglos').html(data.arreglos).paginate({
-                    perPage:                3,      
-                    autoScroll:             true,       
-                    paginatePosition:       ['bottom'] 
-                }).trigger('paginate');
+                $('.row-list-arreglos').html(data.arreglos);
+                Paginacion()
             },error: function (e) {
                 console.log(e);
             }
@@ -43,6 +39,12 @@ $(document).ready(function (e) {
     $('.col-filtro').css({
         height:$('.col-content').height()+'px'
     })
-
+    function Paginacion() {
+        $('.row-list-arreglos').paginate({
+                    perPage:                3,      
+                    autoScroll:             true,       
+                    paginatePosition:       ['bottom'] 
+                });
+    }
     
 })
