@@ -460,24 +460,4 @@ $(document).ready(function(){
             ,onEscape:function(){}
         });
     })
-    $('.query').click(function(){
-            var filter = $(this).attr("id");
-            
-            $.ajax({
-                url: "controlador/Arreglos.php",
-                type: 'POST',
-                data:{
-                    filter:filter,
-                    accion:'filtrado'
-                },beforeSend: function (xhr) {
-                    $('.loading-arreglos').removeClass('hide');
-                },success: function (data, textStatus, jqXHR) {
-                    $('.loading-arreglos').addClass('hide');
-                    $('#contenido').html(data);
-                },error: function (e) {
-                    console.log(e)
-                    msj_error_serve();
-                }
-            })
-    });
 })

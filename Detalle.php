@@ -17,21 +17,18 @@
                 <div class="row" >
                     
                     <?php 
-                    include './conexion.php';
-                    $sql = mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion, tamanio
-                                                        WHERE
-                                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND
-                                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                                        tamanio.arreglo_id = arreglo.id AND
-                                                        arreglo.id=".$_GET['arreglo']);
-                    $res=mysqli_fetch_array($sql);
+                    require_once 'conexion.php';
+                    $id= $_GET['id'];
+                    $sql = "SELECT *FROM arreglo WHERE arreglo.id =".$id;
+                    $query = mysqli_query(ConexionBd(),$sql);
+                    $res=$query->fetch_assoc();
                     ?>
                    
                     <div class="col-md-7 col-md-offset-1">
                         <div id="single-carousel" style="margin-left: 40px !important;">
                             <div class="img-hover">
-                                <div class="overlay" style="width: 55%"> <a href="img/arreglos/img2.png" class="fancybox" rel="gallery"></a></div>
-                                <img src="img/arreglos/img2.png" alt="" class="img-responsive" style="width: 55%">
+                                <div class="overlay" style="width: 55%"> <a href="#" class="fancybox" rel="gallery"></a></div>
+                                <img src="<?=$res['imagen']?>" alt="" class="img-responsive" style="width: 55%">
                             </div>
                         </div>    
                         <br>

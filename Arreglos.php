@@ -137,3 +137,4 @@
 <?php include'./include/footer.php';?>
 <script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
 <script src="js/Jy_Arreglos.js?<?= md5(microtime())?>"></script>
+<script src="js/Arreglos.js?<?= md5(microtime())?>"></script>

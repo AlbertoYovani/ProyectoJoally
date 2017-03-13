@@ -234,31 +234,5 @@
             echo json_encode(array('accion'=>'2'));
         }
     }
-    if($_POST['accion']=='filtrado'){
-        $categoria = $_POST['filter'];
-        if($categoria!=0){
-            $query= "SElECT * FROM jy_clasificacion,arreglo,jy_arreglo_clasificacion WHERE
-                            jy_arreglo_clasificacion.arreglo_id= arreglo.id AND
-                            jy_arreglo_clasificacion.clasificacion_id= jy_clasificacion.clasificacion_id AND
-                            jy_arreglo_clasificacion.clasificacion_id='.$categoria.'";
-        }else if($categoria==0){
-            $query="select * from arreglo";
-        }
-        $result = mysqli_query(ConexionBd(), $query); 
-           $output = '';
-           while ($row = mysqli_fetch_array($result)){            
-                $output.='
-                    <div class="col-xs-12 col-sm-6 col-md-3 nature">
-                        <div class="img-hover">
-                            <img src="'.$row['imagen'].'" alt="" class="img-responsive" style="width: 300px !important;height: 300px !important">
-                            <div class="overlay"><a href="'.$row['imagen'].'" class="fancybox" ><i class="fa fa-plus-circle"></i></a></div>
-                        </div>
-                            <div class="info-gallery" style="background: transparent">
-                            <div class="content-btn"><a class="btn btn-primary ver-arreglo" data-id="'.$row['id'].'">Agregar a Carrito</a></div>
-                        </div>
-                    </div>' ;
-            }
-           echo $output;
-    }
 
 

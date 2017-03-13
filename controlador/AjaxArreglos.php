@@ -51,7 +51,7 @@
                                 <li><i class="fa fa-bookmark-o"></i> '.$row['clasificacion_nombre'].'</li>
                             </ul>
                             <div class="content-btn">
-                                <a href="#" class="btn btn-primary">VER DETALLES</a>
+                                <a href="Detalle.php?id='.$row['id'].'" class="btn btn-primary">Ver Detalles</a>
                             </div>
                         </div>
                     </div>';
