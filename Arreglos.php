@@ -125,13 +125,10 @@
 
                 <div class="col-md-9 col-content" >
                     <br><br>
-<<<<<<< HEAD
                     <div class="row list-view row-list-arreglos " style="height: 750px"></div>
                     <br><br><br>
-=======
                     <div class="row list-view row-list-arreglos scrollable" style="overflow-x: auto;height:750px"></div>
                     <br>
->>>>>>> origin/master
                 </div>
             </div>
         </div>

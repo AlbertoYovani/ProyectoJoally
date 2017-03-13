@@ -29,8 +29,8 @@ $(document).ready(function (e) {
                 accion:'BUSCAR_ARREGLOS'
             },beforeSend: function (xhr) {
             },success: function (data, textStatus, jqXHR) {
-                $('.row-list-arreglos').html(data.arreglos);
-                $('.row-list-arreglos').paginate({
+                //$('.row-list-arreglos').html(data.arreglos);
+                $('.row-list-arreglos').html(data.arreglos).paginate({
                     perPage:                3,      
                     autoScroll:             true,       
                     paginatePosition:       ['bottom'] 
