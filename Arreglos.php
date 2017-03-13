@@ -2,41 +2,73 @@
     include'./include/headerR.php';
     require_once 'conexion.php';
 ?>  
+<link href="css/simplePagination.css" rel="stylesheet">
 <div class="section-title-01">
     <div class="bg_parallax image_04_parallax" style="background: url(img/fondo1.jpg);background-size: cover;background-position: center"></div>
     <div class="opacy_bg_02">
-         <div class="container">
-            <h1>Arreglos Frutales</h1>
-        </div>  
     </div>
-</div>   
+</div>  
 <style>
-.scrollable{
-    
-    overflow-x: hidden!important;
+.maxl{
+  margin:25px ;
 }
-/* Let's get this party started */
-.scrollable::-webkit-scrollbar {
-    width: 5px;
-    
+.inline{
+  display: inline-block;
 }
- 
-/* Track */
-.scrollable::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+.inline + .inline{
+  margin-left:10px;
 }
- 
-/* Handle */
-.scrollable::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(255,0,0,0.10); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+.radio{
+  color:#999;
+  font-size:15px;
+  position:relative;
 }
-.scrollable::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4); 
+.radio span{
+  position:relative;
+   padding-left:20px;
+}
+.radio span:after{
+  content:'';
+  width:15px;
+  height:15px;
+  border:3px solid;
+  position:absolute;
+  left:0;
+  top:1px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
+  box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+.radio input[type="radio"]{
+   cursor: pointer; 
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+.radio input[type="radio"]:checked + span{
+  color:#0B8;  
+}
+.radio input[type="radio"]:checked + span:before{
+    content:'';
+  width:5px;
+  height:5px;
+  position:absolute;
+  background:#0B8;
+  left:5px;
+  top:6px;
+  border-radius:100%;
+  -ms-border-radius:100%;
+  -moz-border-radius:100%;
+  -webkit-border-radius:100%;
 }
 </style>
 <!--Content Central -->
@@ -49,40 +81,36 @@
             <div class="row">
                 <!-- Left Sidebar-->
                 <div class="col-md-3 ">
-                    <div class="container-by-widget-filter bg-dark color-white col-filtro">
-                        <aside class="widget padding-top-mini ">
-                            <h3 class="title-widget">Buscar Arreglos</h3>
-                            <div class="filter-widget ">
-                                <input type="text" name="arreglo_nombre" placeholder="Nombre del Arreglo" >
-                                <div class="selector">
-                                    <select class="guests-input" name="arreglo_clasficacion">
-                                        <option value="1" selected="">Sin Chocolate</option>
-                                        <option value="2">Con Chocolate</option>
-                                        <option value="3">Con Extra Chocolate</option>
-                                    </select>
-                                    <span class="custom-select">Por Clasificación</span>
-                                </div>
-                                <div class="selector hide">
-                                    <select class="guests-input" name="arreglo_tamanio">
-                                        <?php 
-                                        $Tam= mysqli_query(ConexionBd(), "SELECT * FROM tamanio GROUP BY tamanio.tamanio_nombre");
-                                        while ($row= mysqli_fetch_array($Tam)){?>
-                                        <option value="<?=$row['tamanio_nombre']?>"><?=$row['tamanio_nombre']?></option>
-                                        <?php }?>
-                                    </select>
-                                    <span class="custom-select">Por Tamaño</span>
-                                </div>
-                            </div>
-                        </aside>
-                            <!-- END FILTER widget-->
+                    <div class=" col-filtro padding-top-mini ">
+                        <h4>BUSCAR ARREGLOS</h4>
+                        <input type="text" name="arreglo_nombre" placeholder="Nombre del Arreglo" class="form-control">
+                        <br>
+                        <h4>FILTRAR ARREGLOS</h4>
+                        
+                        <label class="radio inline" > 
+                            <input type="radio" name="arreglo_clasficacion" value="0" data-tipo="General">
+                            <span>Todos los Arreglos </span> 
+                        </label><br>
+                        <label class="radio inline"> 
+                            <input type="radio" name="arreglo_clasficacion" value="1" data-tipo="Clasificacion">
+                            <span>Sin Chocolate </span> 
+                        </label><br>
+                        <label class="radio inline"> 
+                            <input type="radio" name="arreglo_clasficacion" value="2" data-tipo="Clasificacion">
+                            <span>Con Chocolate </span> 
+                        </label><br>
+                        <label class="radio inline"> 
+                            <input type="radio" name="arreglo_clasficacion" value="3" data-tipo="Clasificacion">
+                            <span>Con Extra Chololate </span> 
+                        </label>
                     </div>
                 </div>
                 <!-- End Left Sidebar-->
 
-                <div class="col-md-9 col-content">
+                <div class="col-md-9 col-content" >
                     <br><br>
-                    <div class="row list-view row-list-arreglos scrollable" style="overflow-x: auto;height: 750px"></div>
-                    <br>
+                    <div class="row list-view row-list-arreglos " style="height: 750px"></div>
+                    <br><br><br>
                 </div>
             </div>
         </div>
@@ -91,4 +119,5 @@
 <!-- End Content Central -->
 <!-- End Section Title-->
 <?php include'./include/footer.php';?>
+<script src="js/jquery.bootpag.min.js" type="text/javascript"></script>
 <script src="js/Jy_Arreglos.js?<?= md5(microtime())?>"></script>
