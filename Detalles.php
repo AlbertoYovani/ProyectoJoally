@@ -1,4 +1,4 @@
-<?php include './include/headerP.php';?>
+<?php include './include/header.php';?>
 <div class="section-title-01" style="margin-bottom: 180px !important;">
     <div class="bg_parallax image_04_parallax" style="background: url(img/footer3.jpg);background-size: cover!important;background-position: center"></div>
     <div class="opacy_bg_02">
@@ -16,7 +16,6 @@
         <div class=" paddings-mini tabs-detailed">
             <div class="container wow fadeInUp">
                 <div class="row" >
-                    
                     <?php 
                     require_once 'conexion.php';
                     $id= $_GET['id'];
@@ -24,7 +23,6 @@
                     $query = mysqli_query(ConexionBd(),$sql);
                     $res=$query->fetch_assoc();
                     ?>
-                   
                     <div class="col-md-7 col-md-offset-1">
                         <div id="single-carousel">
                             <div class="img-hover">
@@ -35,32 +33,111 @@
                         <br>
                         <h2 title="Nombre del arreglo" style="color: #308DE4"><?=$res['nombre']?></h2>
                         <br>
-                        <h4 style="margin-left: 20px;">Tamaños</h4>
-                        <div class=" col-md-12">
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="1">Extra-Grande</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="2">Grande</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="3">Mediano</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="4">Junior</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="5">Pequeño</a>
-                        </div>
-                        <br>
-                        <div id="precios">
+                        <div class="row">
+<style>
+    .maxl{
+      margin:25px ;
+    }
+    .inline{
+      display: inline-block;
+    }
+    .inline{
+        margin-bottom: -3px; 
+    }
+    .inline + .inline{
+      margin-left:10px;
+    }
+    .radio{
+      color:#999;
+      font-size:15px;
+      position:relative;
+    }
+    .radio span{
+      position:relative;
+       padding-left:20px;
+    }
+    .radio span:after{
+      content:'';
+      width:15px;
+      height:15px;
+      border:3px solid;
+      position:absolute;
+      left:0;
+      top:1px;
+      border-radius:100%;
+      -ms-border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      box-sizing:border-box;
+      -ms-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+    }
+    .radio input[type="radio"]{
+       cursor: pointer; 
+      position:absolute;
+      width:100%;
+      height:100%;
+      z-index: 1;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    }
+    .radio input[type="radio"]:checked + span{
+      color:#0B8;  
+    }
+    .radio input[type="radio"]:checked + span:before{
+        content:'';
+      width:5px;
+      height:5px;
+      position:absolute;
+      background:#0B8;
+      left:5px;
+      top:6px;
+      border-radius:100%;
+      -ms-border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+</style>
+                            
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-mini">Pequeño</button>
+                                <h4>Tamaños</h4>
+                                    <label class="radio inline" title="Seleccionar"> 
+                                    <input type="radio" name="arreglo_tamanio" value="0" data-tipo="tamanio">
+                                    <span>Extra-Grande </span> 
+                                </label><br>
+                                <label class="radio inline" title="Seleccionar"> 
+                                    <input type="radio" name="arreglo_tamanio" value="1" data-tipo="tamanio">
+                                    <span>Grande </span> 
+                                </label><br>
+                                <label class="radio inline" title="Seleccionar"> 
+                                    <input type="radio" name="arreglo_tamanio" value="2" data-tipo="tamanio">
+                                    <span>Mediano </span> 
+                                </label><br>
+                                <label class="radio inline" title="Seleccionar"> 
+                                    <input type="radio" name="arreglo_tamanio" value="4" data-tipo="tamanio">
+                                    <span>Junior </span> 
+                                </label><br>
+                                <label class="radio inline" title="Seleccionar"> 
+                                    <input type="radio" name="arreglo_tamanio" value="5" data-tipo="tamanio">
+                                    <span>Pequeño </span> 
+                                </label>
+                            </div>
+                            <div class="col-md-5 col-md-offset-3">
+                                <br><br>
+                                <div id="precios">
+                                    <h2 style=" font-size:40px ;color: #308DE4;">MXN$ 123.00 </h2> 
+                                </div>
+                                <br>
+                                <input type="number" placeholder="Cantidad" autofocus="" name="pedidos_cantidad" class="form-control">
+                                <br>
+                                <input type="button" name="pedidos_cantidad" class="btn btn-primary btn-block" value="GREGAR A CARRITO">
+                            </div>
                             <br><br>
-                            <h5 style="font-size: 14px; color: #000000; margin-left: 170px">Precio: << Seleccione un tamaño >> </h5> 
                         </div>
-                        <br>
-                        <div style="margin-left: 160px">
-                            <h5>Cantidad: <input type="number" name="pedidos_cantidad" title="Cantidad a ordenar" class="form-control-static"></h5>
-                        </div>
-                        <div class="col-md-5 pointer-icono" style="margin-left: 150px !important;">
-                            <br>
-                            <div style="color: #308DE4; border: solid 1px #000 !important; text-align: center; background-color: #000;">
-                                <i class="fa fa-cart-plus fa-2x" style="color:#88C425"> 
-                                    <h6 style="color: #88C425;">AGREGAR A CARRITO</h6>
-                                </i>
-                            </div><br><br>
-                        </div>
-                        
                         <hr class="separator">
                         <div class="row">
                             <div class="col-md-7">

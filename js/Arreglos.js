@@ -460,4 +460,24 @@ $(document).ready(function(){
             ,onEscape:function(){}
         });
     })
+    /*Filtro de los precios de los arreglos, dependiendo de su tamaño*/
+    $('.precio').click(function(){
+            var id_arreglo = $(this).attr("data-id");
+            var id_tamanio = $(this).attr("id");
+            $.ajax({
+                url: "controlador/Arreglos.php",
+                type: 'POST',
+                data:{
+                    id_arreglo:id_arreglo,
+                    id_tamanio:id_tamanio,
+                    accion:'filtroprecio'
+                },beforeSend: function (xhr) {
+                },success: function (data, textStatus, jqXHR) {
+                    $('#precios').html(data);
+                },error: function (e) {
+                    console.log(e)
+                    msj_error_serve();
+                }
+            })
+    });
 })

@@ -234,5 +234,24 @@
             echo json_encode(array('accion'=>'2'));
         }
     }
-
+    if($_POST['accion'=='filtroprecio']){
+        $id_arreglo = $_POST['id_arreglo'];
+        $id_tamanio = $_POST['id_tamanio'];
+        $sql = mysqli_query(ConexionBd(), "SELECT precio FROM arreglo, tamanio WHERE arreglo.id =".$id_arreglo." and
+                                            tamanio.arreglo_id = arreglo.id and
+                                            tamanio.tamanio_id =".$id_tamanio);
+        $res=$sql->fetch_assoc();
+        if($res['precio'!='']){
+            $tr='';
+            $tr='<div id="precios">
+                    <br><br>
+                    <h5 style="font-size: 14px; color: #000000; margin-left: 170px">Precio: << Seleccione un tamaño >> </h5> 
+                 </div>';
+            
+            
+        }else{
+            
+        }
+        
+    }
 

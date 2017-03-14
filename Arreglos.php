@@ -1,5 +1,5 @@
 <?php 
-    include'./include/headerR.php';
+    include'./include/headerP.php';
     require_once 'conexion.php';
 ?>  
 <link href="css/simplePagination.css" rel="stylesheet">
@@ -8,8 +8,9 @@
     <div class="opacy_bg_02">
 <<<<<<< HEAD
 =======
-         <div class="container">
-            <h1>Arreglos Frutales</h1>
+
+        <div class="container" style="margin-top: -50px !important">
+            <h1><img src="img/logo.png" style="width: 250px; height: 210px;"></h1><br><br><br><br>
 <<<<<<< HEAD
             <div class="crumbs">
                 <ul>
@@ -88,7 +89,7 @@
 }
 </style>
 <!--Content Central -->
-<div class="content-central" style="margin-top: -250px;">
+<div class="content-central" style="margin-top: -125px;">
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
@@ -102,7 +103,6 @@
                         <input type="text" name="arreglo_nombre" placeholder="Nombre del Arreglo" class="form-control">
                         <br>
                         <h4>FILTRAR ARREGLOS</h4>
-                        
                         <label class="radio inline" > 
                             <input type="radio" name="arreglo_clasficacion" value="0" data-tipo="General">
                             <span>Todos los Arreglos </span> 

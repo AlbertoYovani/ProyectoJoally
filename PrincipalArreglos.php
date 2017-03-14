@@ -9,8 +9,8 @@
 <<<<<<< HEAD
 =======
 
-        <div class="container">
-             <h1><img src="img/logo.png" style="width: 250px; height: 210px;"></h1>
+        <div class="container" style="margin-top: -50px !important">
+            <h1><img src="img/logo.png" style="width: 250px; height: 210px;"></h1><br><br><br><br>
 <<<<<<< HEAD
             <div class="crumbs">
                 <ul>
@@ -89,7 +89,7 @@
 }
 </style>
 <!--Content Central -->
-<div class="content-central" style="margin-top: -250px;">
+<div class="content-central" style="margin-top: -125px;">
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
