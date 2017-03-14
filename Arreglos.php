@@ -1,6 +1,7 @@
 <?php 
     include'./include/headerP.php';
     require_once 'conexion.php';
+    error_reporting(0);
 ?>  
 <link href="css/simplePagination.css" rel="stylesheet">
 <div class="section-title-01">
@@ -97,9 +98,9 @@
                         <h4>BUSCAR ARREGLOS</h4>
                         <form method="GET" action="Arreglos.php">
                         <div class="input-group">
-                            <input type="hidden" name="Clasificacion" value="All">
+                            <input type="hidden" name="Clasificacion" value="120">
                             <input type="hidden" name="Tipo" value="Nombre">
-                            <input type="text" class="form-control" placeholder="Buscar Arreglo" name="Query">
+                            <input type="text" class="form-control" placeholder="Buscar Arreglo" value="<?=$_GET['Query']?>" name="Query">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit">Buscar</button>
                             </span>
