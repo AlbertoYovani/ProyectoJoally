@@ -22,7 +22,7 @@ $(document).ready(function($) {
   //=================================== Loader =====================================//
   jQuery(window).load(function() {
     jQuery(".status").fadeOut();
-      jQuery(".preloader").delay(1000).fadeOut("slow");
+      jQuery(".preloader").delay(1000).fadeOut(1000);
   })
 
 	//=================================== Carousel Services  ==============================//	 
