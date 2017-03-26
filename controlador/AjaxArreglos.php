@@ -6,25 +6,29 @@
         $Valor=$_POST['Valor'];
         $FILTRO_TIPO=$_POST['tipo_filtro'];
         if($FILTRO_TIPO=='Nombre'){
-            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                        WHERE
-                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
+            $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre 
+                                              FROM arreglo, clasificacion
+                                              WHERE arreglo.idCa = clasificacion.id 
+                                              AND arreglo.tamanio = 1 
+                                              AND arreglo.nombre LIKE '%$Valor%'");
         }if($FILTRO_TIPO=='Clasificacion'){
-            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                        WHERE
-                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND  jy_clasificacion.clasificacion_id=$Valor");
-        }if($FILTRO_TIPO=='Tamaño'){
-            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                        WHERE
-                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
-        }if($FILTRO_TIPO=='General'){
-            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                        WHERE
-                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id ");
+            $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre
+                                              FROM arreglo, clasificacion 
+                                              WHERE arreglo.idCa = clasificacion.id 
+                                              AND arreglo.tamanio = 1 
+                                              AND clasificacion.id=$Valor");
+        }
+//        if($FILTRO_TIPO=='Tamaño'){
+//            $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
+//                                        WHERE
+//                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
+//                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
+//        }
+        if($FILTRO_TIPO=='General'){
+            $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre 
+                                              FROM arreglo, clasificacion 
+                                              WHERE arreglo.idCa = clasificacion.id
+                                              AND arreglo.tamanio = 1 ");
         }
         
         $col='';
@@ -39,7 +43,6 @@
                             <img src="'.$row['imagen'].'" alt="" class="img-responsive">
                             <div class="overlay"><a href="'.$row['imagen'].'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
                         </div>
-
                         <div class="info-gallery">
                             <h3 style="text-transform: uppercase">
                                 '.$row['nombre'].'<br>

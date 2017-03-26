@@ -41,7 +41,7 @@ html {
 }
 body{
 	font-family: 'Open Sans', sans-serif;
-	color: #F00001 !important;
+	color: #308DE4 !important;   /*Color para el spiner*/
 	font-size: 1rem;
 	font-weight: lighter;
 	line-height: 1.5rem;
@@ -3571,11 +3571,11 @@ address strong{
     padding-bottom: 2px!important;
 }
 .modal-header,  .modal-header h4{
-    background: #01DF01 !important;
+    background: #308DE4 !important; /*Color del header de la ventanita emergente con el spiner*/
     padding: 5px!important;
 }
 .close{
-    color: #F00001 !important;
+    color: #819FF7 !important; /*Color de la X de la ventanita emergente*/
     font-size:x-large!important;
 }                        
 .modal-title{

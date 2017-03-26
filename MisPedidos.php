@@ -23,13 +23,13 @@
                         <table class="table table-bordered table-pedidos">
                             <thead>
                                 <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Clasificación</th>
-                                    <th>Tamaño</th>
-                                    <th>Dedicatoria</th>
-                                    <th>Acción</th>
+                                    <th style="color: #FA5882 !important;">Imagen</th>
+                                    <th style="color: #FA5882 !important;">Nombre</th>
+                                    <th style="color: #FA5882 !important;">Precio</th>
+                                    <th style="color: #FA5882 !important;">Clasificación</th>
+                                    <th style="color: #FA5882 !important;">Tamaño</th>
+                                    <th style="color: #FA5882 !important;">Dedicatoria</th>
+                                    <th style="color: #FA5882 !important;">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,7 +47,7 @@
                <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="PrincipalArreglos.php">Pedir más...</a>
+                        <a href="PrincipalArreglos.php">Seguir ordenando...</a>
                     </div>
                 </div>
                <br>

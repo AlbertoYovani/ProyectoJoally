@@ -1,5 +1,5 @@
 <?php 
-    include'./include/headerP.php';
+    include'./include/header.php';
     require_once 'conexion.php';
     error_reporting(0);
 ?>  
@@ -145,62 +145,71 @@
                                 $FILTRO_TIPO=$_GET['Tipo'];
                                 $Clasificacion=$_GET['Clasificacion'];
                                 if($FILTRO_TIPO=='Nombre'){
-                                    $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                                                WHERE
-                                                                jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                                                jy_arreglo_clasificacion.arreglo_id=arreglo.id AND arreglo.nombre LIKE '%$Valor%'");
+                                    $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre, 
+                                                                      arreglo.id AS arreglo_id, clasificacion.nombre AS clasificacion_nombre
+                                                                      FROM arreglo, clasificacion
+                                                                      WHERE arreglo.idCa = clasificacion.id 
+                                                                      AND arreglo.tamanio = 1 
+                                                                      AND arreglo.nombre LIKE '%$Valor%'");
                                 }if($FILTRO_TIPO=='Clasificacion'){
-                                    $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                                                WHERE
-                                                                jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                                                jy_arreglo_clasificacion.arreglo_id=arreglo.id AND  jy_clasificacion.clasificacion_id=$Clasificacion");
+                                    $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre, 
+                                                                      arreglo.id AS arreglo_id, clasificacion.nombre AS clasificacion_nombre
+                                                                      FROM arreglo, clasificacion 
+                                                                      WHERE arreglo.idCa = clasificacion.id 
+                                                                      AND arreglo.tamanio = 1 
+                                                                      AND clasificacion.id =$Clasificacion");
                                 }if($FILTRO_TIPO=='General'){
-                                    $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                                                WHERE
-                                                                jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                                                jy_arreglo_clasificacion.arreglo_id=arreglo.id ");
+                                    $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre, 
+                                                                      arreglo.id AS arreglo_id, clasificacion.nombre AS clasificacion_nombre 
+                                                                      FROM arreglo, clasificacion 
+                                                                      WHERE arreglo.idCa = clasificacion.id
+                                                                      AND arreglo.tamanio = 1 ");
                                 }
                             }else{
-                                $sql= mysqli_query(ConexionBd(), "SELECT * FROM arreglo, jy_clasificacion, jy_arreglo_clasificacion
-                                        WHERE
-                                        jy_arreglo_clasificacion.clasificacion_id=jy_clasificacion.clasificacion_id AND
-                                        jy_arreglo_clasificacion.arreglo_id=arreglo.id LIMIT 20");
+                                $sql= mysqli_query(ConexionBd(), "SELECT *, arreglo.nombre AS arreglo_nombre, 
+                                                                  arreglo.id AS arreglo_id, clasificacion.nombre AS clasificacion_nombre
+                                                                  FROM arreglo, clasificacion
+                                                                  WHERE arreglo.idCa = clasificacion.id 
+                                                                  AND arreglo.tamanio = 1 LIMIT 20");
                             }
                         $col='';
+                        $total = 0;
                         while ($row = mysqli_fetch_array($sql)) {
-                            $Tam= mysqli_query(ConexionBd(), "SELECT * FROM tamanio WHERE tamanio.arreglo_id=".$row['id']);
-                            $TAM_LIST='';
-                            while ($RESUL_TAM = mysqli_fetch_array($Tam)) {
-                                $TAM_LIST.=$RESUL_TAM['tamanio_nombre'].', ';
-                            }
-                            
-                        ?>
-                        <div class="col-md-12">
-                            <div class="img-hover">
-                                <img src="<?=$row['imagen']?>" alt="" class="img-responsive">
-                                <div class="overlay"><a href="<?=$row['imagen']?>" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3 style="text-transform: uppercase">
-                                    <?=$row['nombre']?><br>
-                                    <span style="text-transform: none"><b>Tamaños:</b> <?= trim($TAM_LIST, ', ')?></span>
-                                </h3>
-                                <hr class="separator">
-                                <p style="height: 40px;"><b>Descripción:</b> <?= substr($row['descripcion'], 0,150)?>...</p>
-                                <ul class="starts">
-                                    <li><i class="fa fa-bookmark-o"></i> <?=$row['clasificacion_nombre']?></li>
-                                </ul>
-                                <div class="content-btn">
-                                    <a href="Detalle.php?id=<?=$row['id']?>" class="btn btn-primary">Ver Detalles</a>
+                                $total++;
+                                $Tam= mysqli_query(ConexionBd(), "SELECT tamanio.nombre AS tamanio_nombre 
+                                                                  FROM arreglo,tamanio WHERE arreglo.tamanio = tamanio.id
+                                                                  AND arreglo.nombre = ".$row['arreglo_nombre']);
+                                $TAM_LIST='';
+                                while ($RESUL_TAM = mysqli_fetch_array($Tam)) {
+                                    $TAM_LIST.=$RESUL_TAM['tamanio_nombre'].', ';
+                                }
+                            ?>
+                                <div class="col-md-12">
+                                    <div class="img-hover">
+                                        <?php echo '<img alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($row['imagen']) . '">'; ?>
+                                        <div class="overlay"><a href="<?php echo 'data:image/jpeg;base64,' . base64_encode($row['imagen']) . ''; ?>" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+                                    <div class="info-gallery">
+                                        <h3 style="text-transform: uppercase">
+                                            <?=$row['arreglo_nombre']?><br>
+                                            <span style="text-transform: none"><b>Tamaños:</b> <?= trim($TAM_LIST, ', ')?></span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p style="height: 40px;"><b>Descripción:</b> <?= substr($row['descripcion'], 0,150)?>...</p>
+                                        <ul class="starts">
+                                            <li><i class="fa fa-bookmark-o"></i> <?=$row['clasificacion_nombre']?></li>
+                                        </ul>
+                                        <div class="content-btn">
+                                            <a href="Detalles.php?id=<?=$row['arreglo_id']?>" class="btn btn-primary">Ver Detalles</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
                         <?php }?>
                     </div>
                     <br><br><br>
                 </div>
             </div>
+            <input type="hidden" name="totalarreglos" value="<?=$total?>" style="appe">
         </div>
     </div>   
 </div>

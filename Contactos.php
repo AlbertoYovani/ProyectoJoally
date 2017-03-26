@@ -1,6 +1,15 @@
 
-<?php include'./include/headerR.php';?>
-<br><br><br><br><br><br><br><br>
+<?php include'./include/header.php';?>
+<div class="section-title-01">
+    <div class="bg_parallax image_04_parallax" style="background: url(img/footer3.jpg);background-size: cover!important;background-position: center"></div>
+    <div class="opacy_bg_02">
+         <div class="container">
+             <br><br><br><br>
+             <img src="img/logo.png" style="width: 250px; height: 210px;">
+        </div>  
+    </div>  
+</div><br><br>
+
 <div class="content-central">
     <!-- Shadow Semiboxed -->
     <div class="semiboxshadow text-center">

@@ -1,34 +1,38 @@
-<?php include './include/headerR.php';?>
-
-<div class="content-central">
-    <!-- Shadow Semiboxed -->
+<?php include './include/header.php';?>
+<div class="section-title-01" style="margin-bottom: 180px !important;">
+    <div class="bg_parallax image_04_parallax" style="background: url(img/footer3.jpg);background-size: cover!important;background-position: center"></div>
+    <div class="opacy_bg_02">
+         <div class="container">
+             <br><br><br><br>
+             <img src="img/logo.png" style="width: 250px; height: 210px;">
+        </div>  
+    </div>  
+</div>
+<div class="content-central" style="margin-top: -300px">
     <div class="semiboxshadow text-center">
         <img src="img/img-theme/shp.png" class="img-responsive" alt="">
     </div>
     <div class="content_info">
         <div class="paddings-mini">
             <div class="container">
-                <br><br><br><br><br><br><br><br>
                 <hr class="tall"> <!--Para mostrar uuna rayita -->
-
                 <div class="row">
                     <div class="col-md-12">
                         <h2 class="losp">MIS PEDIDOS</h2><br>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered table-pedidos">
+                        <table class="table table-bordered table-pedidos table-hover">
                             <thead>
                                 <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Clasificación</th>
-                                    <th>Tamaño</th>
-                                    <th>Dedicatoria</th>
-                                    <th>Acción</th>
+                                    <th style="color: #FA5882 !important;">Imagen</th>
+                                    <th style="color: #FA5882 !important;">Nombre</th>
+                                    <th style="color: #FA5882 !important;">Precio</th>
+                                    <th style="color: #FA5882 !important;">Clasificación</th>
+                                    <th style="color: #FA5882 !important;">Tamaño</th>
+                                    <th style="color: #FA5882 !important;">Dedicatoria</th>
+                                    <th style="color: #FA5882 !important;">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,7 +50,7 @@
                 <!-- En esta muestra el total a pagar por todo los arreglos pedidos--> 
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="PrincipalArreglos.php">Pedir más...</a>
+                        <a href="Arreglos.php.php">Seguir ordenando...</a>
                     </div>
                 </div>
                 <br>

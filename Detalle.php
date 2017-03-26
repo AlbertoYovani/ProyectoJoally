@@ -16,51 +16,64 @@
         <div class=" paddings-mini tabs-detailed">
             <div class="container wow fadeInUp">
                 <div class="row" >
-                    
                     <?php 
-                    require_once 'conexion.php';
-                    $id= $_GET['id'];
-                    $sql = "SELECT *FROM arreglo WHERE arreglo.id =".$id;
-                    $query = mysqli_query(ConexionBd(),$sql);
-                    $res=$query->fetch_assoc();
+                        require_once 'conexion.php';
+                        $arre = "SELECT *, clasificacion.id AS clasificacion_id, 
+                                 arreglo.nombre AS nombre_A, clasificacion.nombre AS nombre_Cla 
+                                 FROM arreglo,clasificacion 
+                                 WHERE clasificacion.id = arreglo.idCa 
+                                 AND arreglo.id =".$_GET['id'];
+                        $queri = mysqli_query(ConexionBd(),$arre);
+                        $ress=$queri->fetch_assoc();
                     ?>
-                   
                     <div class="col-md-7 col-md-offset-1">
                         <div id="single-carousel">
                             <div class="img-hover">
-                                <div class="overlay"> <a href="<?=$res['imagen']?>" class="fancybox" rel="gallery"></a></div>
-                                <img src="<?=$res['imagen']?>" alt="" class="img-responsive" >
+                                <div class="overlay"> <a href="<?php echo 'data:image/jpeg;base64,' . base64_encode($ress['imagen']) . ''; ?>" class="fancybox" rel="gallery"></a></div>
+                                <?php echo '<img alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($ress['imagen']) . '">'; ?>
                             </div>
                         </div>    
                         <br>
-                        <h2 title="Nombre del arreglo" style="color: #308DE4"><?=$res['nombre']?></h2>
+                        <h2 title="Nombre del arreglo" style="color: #FA5882"><?=$ress['nombre_A']?></h2>
                         <br>
-                        <h4 style="margin-left: 20px;">Tamaños</h4>
-                        <div class=" col-md-12">
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="1">Extra-Grande</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="2">Grande</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="3">Mediano</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="4">Junior</a>
-                            <a title="Seleccione" href="#" class="btn btn-primary precio" data-id="<?=$res['id']?>" id="5">Pequeño</a>
+
+                    <div class="row">
+                            <div class="col-md-4">
+                                <a style="width: 200px; margin-bottom: 8px; background: #308DE4 !important;" 
+                                   data-tamanio="1" class="btn btn-primary Precio-arreglo-tamanio">Extra-Grande
+                                </a>
+                                <a style="width: 200px; margin-bottom: 8px; background: #308DE4 !important;" 
+                                   data-tamanio="2" class="btn btn-primary Precio-arreglo-tamanio">Grande
+                                </a>
+                                <a style="width: 200px; margin-bottom: 8px; background: #308DE4 !important;" 
+                                   data-tamanio="3" class="btn btn-primary Precio-arreglo-tamanio">Mediano
+                                </a>
+                                <a style="width: 200px; margin-bottom: 8px; background: #308DE4 !important;" 
+                                   data-tamanio="4" class="btn btn-primary Precio-arreglo-tamanio">Pequeño
+                                </a>
+                                <a style="width: 200px; margin-bottom: 8px; background: #308DE4 !important;" 
+                                   data-tamanio="5" class="btn btn-primary Precio-arreglo-tamanio">Junior
+                                </a>
+                            </div>
+                            <div class="col-md-5 col-md-offset-2">
+                                <div class="precio-arreglo">
+                                    <h2 style=" font-size:40px ;color: #308DE4;">MXN$ 00.00</h2> 
+                                </div>
+                                <!--Obtiene el nombre del arreglo, sirve para realizarel INSERT  del arreglo-->
+                                <input type="hidden" id="tamanio_id" name="tamanio_id" class="form-control" value="">
+                                <input type="hidden" id="arreglo_nombre" name="arreglo_nombre" class="form-control" value="<?=$ress['nombre_A']?>">
+                                <input type="hidden" name="clasificacion_id" class="form-control" value="<?=$ress['clasificacion_id']?>">
+                                <input type="number" placeholder="Cantidad" autofocus="" name="pedidos_cantidad" class="form-control">
+                                <br>
+                                <input type="button" name="pedidos_cantidad" class="btn btn-primary btn-block agregar-pedido" value="GREGAR A CARRITO">
+                            </div>
                         </div>
+                        <hr class="separator">
                         <br>
-                        <div id="precios">
-                            <br><br>
-                            <h5 style="font-size: 14px; color: #000000; margin-left: 170px">Precio: << Seleccione un tamaño >> </h5> 
-                        </div>
-                        <br>
-                        <div style="margin-left: 160px">
-                            <h5>Cantidad: <input type="number" name="pedidos_cantidad" title="Cantidad a ordenar" class="form-control-static"></h5>
-                        </div>
-                        <div class="col-md-5 pointer-icono" style="margin-left: 150px !important;">
-                            <br>
-                            <div style="color: #308DE4; border: solid 1px #000 !important; text-align: center; background-color: #000;">
-                                <i class="fa fa-cart-plus fa-2x" style="color:#88C425"> 
-                                    <h6 style="color: #88C425;">AGREGAR A CARRITO</h6>
-                                </i>
-                            </div><br><br>
-                        </div>
-                        
+                        <h4 style="color: #308DE6">Descripción</h4>
+                        <p style="color: #6E6E6E" class="text-justify"><?=$ress['descripcion']?></p>
+                        <h4 style="color: #308DE6">Clasificación</h4>
+                        <p style="color: #6E6E6E" class="text-justify"><?=$ress['nombre_Cla']?></p>
                         <hr class="separator">
                         <div class="row">
                             <div class="col-md-7">
@@ -69,11 +82,6 @@
                             </div>
                         </div>
                         <br>
-                        <h4 style="color: #308DE6">Descripción</h4>
-                        <p class="text-justify"><?=$res['descripcion'] ?></p>
-                        <br>
-                        <h4 style="color: #308DE6">Categoría</h4>
-                        <p>Sin Chocolate</p>
                         <h4 style="color: #308DE6">Servicios</h4>
                         <div class="row">
                             <div class="col-md-3 text-center">
@@ -90,13 +98,7 @@
                         <hr class="separator">
                         <br>
                         <div class="row mas-info-habitacion">
-                            <div class="col-md-4">
-                                <div class="img-hover">
-                                    <img src="" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/arreglos/img3.png" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-                            </div>
-                            <div class="col-md-5" style="padding: 0px">
+                            <div class="col-md-5 col-md-offset-4" style="padding: 0px">
                                 <h6 style="margin-top: -6px; margin-left:75px !important;">
                                     <a href="Contactos.php" class="mas-info-click no-decoration" data-class="1">Más Información</a>
                                 </h6>
@@ -107,14 +109,14 @@
                         <h3>Más arreglos</h3>
                         <?php
                         require_once 'conexion.php';
-                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo limit 8");
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.tamanio = 1 LIMIT 8");
                         while($res= mysqli_fetch_array($sql)){ ?>
                         <h4></h4>
-                        <a href="Arreglos.php">
+                        <a href="Detalle.php?id=<?=$res['id']?>">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="img-hover">
-                                        <img src="<?=$res['imagen'] ?>" alt="" class="img-responsive">                     
+                                        <?php echo '<img alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($res['imagen']) . '">'; ?>                     
                                     </div>
                                 </div>
                                 <div class="col-md-6" style="padding-left: 2px">
@@ -131,3 +133,4 @@
     </div>
 </div>
 <?php include './include/footer.php';?>
+<script src="js/Arreglos.js?<?= md5(microtime())?>"></script>

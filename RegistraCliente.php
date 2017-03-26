@@ -1,4 +1,4 @@
-<?php include './include/headerR.php';?>
+<?php include './include/header.php';?>
 <link href="js/html5imageupload/demo.html5imageupload.css" rel="stylesheet" type="text/css">
 <link href="js/html5imageupload/html5imageupload.css" rel="stylesheet" type="text/css">
 <section class="content-central miborder" style="margin-top: 8%" >

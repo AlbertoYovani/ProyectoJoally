@@ -17,15 +17,15 @@
         <div class="content-boxes">
         <?php
             require_once 'conexion.php';
-            $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo limit 2");
+            $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.tamanio = 1 LIMIT 2");
             while($res= mysqli_fetch_array($sql)){ ?>
 
             <div class="item-boxed"><br><br>
                 <div class="image-boxed">
                     <span class="overlay"></span>
                     <div class="img-hover">
-                        <div class="overlay"> <a href="<?=$res['imagen']?>" class="fancybox" rel="gallery"></a></div>
-                        <img src="<?=$res['imagen']?>" alt="" class="img-responsive" >
+                        <div class="overlay"> <a href="<?php echo 'data:image/jpeg;base64,' . base64_encode($res['imagen']) . ''; ?>" class="fancybox" rel="gallery"></a></div>
+                         <?php echo '<img alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($res['imagen']) . '">'; ?>
                     </div>
                     <a href="Arreglos.php" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
                 </div>
@@ -44,13 +44,13 @@
                         <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
                     </ul>
                     <div class="content-btn">
-                        <a href="Detalle.php?id=<?=$res['id']?>" class="btn btn-primary">Ver Detalles</a>
+                        <a href="Detalles.php?id=<?=$res['id']?>" class="btn btn-primary">Ver Detalles</a>
                     </div>
                 </div>
             </div>
         <?php } 
             require_once 'conexion.php';
-            $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.id > 10 limit 2");
+            $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.tamanio = 1 LIMIT 2");
             while($res= mysqli_fetch_array($sql)){ ?>
             <div class="item-boxed">
                 <div class="info-boxed boxed-bottom">
@@ -67,14 +67,14 @@
                         <li><a href="#"><i class="fa fa-star"></i></a></li>
                         <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
                     </ul>
-                    <div class="content-btn"><a href="Detalle.php?id=<?=$res['id']?>" class="btn btn-primary">Ver Detalles</a></div>
+                    <div class="content-btn"><a href="Detalles.php?id=<?=$res['id']?>" class="btn btn-primary">Ver Detalles</a></div>
                 </div>
                 <br><br>
                 <div class="image-boxed image-bottom">
                     <span class="overlay"></span>
                     <div class="img-hover">
-                        <div class="overlay"> <a href="<?=$res['imagen']?>" class="fancybox" rel="gallery"></a></div>
-                        <img src="<?=$res['imagen']?>" alt="" class="img-responsive">
+                        <div class="overlay"> <a href="<?php echo 'data:image/jpeg;base64,' . base64_encode($res['imagen']) . ''; ?>" class="fancybox" rel="gallery"></a></div>
+                        <?php echo '<img alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($res['imagen']) . '">'; ?>
                     </div>
                     <a href="Arreglos.php" class="more-boxe"><i class="fa fa-plus-circle"></i></a>
                 </div>
@@ -196,11 +196,11 @@
                         <ul class="services-lines">
                         <?php
                         require_once 'conexion.php';
-                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.id < 13 limit 8");
+                        $sql = mysqli_query(ConexionBd(),"SELECT *FROM arreglo WHERE arreglo.tamanio = 1 LIMIT 8");
                         while($res= mysqli_fetch_array($sql)){ ?>    
                             <li>
                                 <div class="item-service-line">
-                                    <img src="<?=$res['imagen'] ?>" style="width: 80px; height: 80px;">
+                                    <?php echo '<img style="width: 80px; height: 80px;" alt="" class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($res['imagen']) . '">'; ?>
                                     <h5 style="color:#FA5882 !important;"><?=$res['nombre']?></h5>
                                 </div>
                             </li>

@@ -4,17 +4,12 @@ $(document).ready(function(){
             title:'Realizar un pedido',
             message:'<div class="row">'+
                         '<div class="col-md-11">'+
-                            '<p class="tamanio">Para poder realizar tu pedido crea tu cuenta, no te quitara mas de 1 munito</p>'+
+                            '<p class="tamanio">Crea tu cuenta, para realizar pedidos en todo momento.</p>'+
                         '</div>'+
                     '</div>',
+            size:'small',
             buttons:{
-                Cancelar:{
-                    label:'Cancelar',
-                    className:'estilobtn',
-                    callback:function () {
-                        
-                    }
-                },Aceptar:{
+                Aceptar:{
                     label:'Registrarme',
                     className:'estilobtn',
                     callback:function () {

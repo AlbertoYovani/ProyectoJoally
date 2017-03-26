@@ -2,70 +2,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Basic -->
         <meta charset="utf-8">
         <title>Joally Arreglos Frutales</title>
         <meta name="keywords" content="HTML5 Template" />
         <meta name="description" content="World Cup - Responsive HTML5 Template soccer and sports">
         <meta name="author" content="iwthemes.com">  
-
-        <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-        <!-- Theme CSS -->
         <link href="css/style.css" rel="stylesheet" media="screen">
-        <!-- Responsive CSS -->
         <link href="css/theme-responsive.css" rel="stylesheet" media="screen">
-        <!-- Skins Theme -->
         <link href="css/skins/purple/purple.css" rel="stylesheet" type="text/css">
         <link href="css/MyStyle/Mystyle.css" rel="stylesheet" type="text/css">
-        <!-- para el perfil -->
-
-        <!-- Favicons -->
         <link rel="shortcut icon" href="img/logo_joally.png">
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">  
-        
         <link href="js/jquery-notifications/css/messenger.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="js/jquery-notifications/css/messenger-theme-flat.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="js/jquery-notifications/css/location-sel.css" rel="stylesheet" type="text/css" media="screen"/>
-       <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">  -->
-        <!-- Head Libs -->
         <script src="js/modernizr.js"></script>
     </head>
-    
     <body>
-       <!--Preloader-->
         <div class="preloader">
             <div class="status">&nbsp;</div>
         </div>
         <div id="layout">
-            <!-- Header-->
             <header id="header" class="header-v2">
-                <!-- Main Nav -->
-                <nav class="flat-mega-menu">            
-                    <!-- flat-mega-menu class -->
-                    <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
-                    <input id="mobile-button" type="checkbox"> 
-                    
-                   <!-- <img src="img/logo_joally.png" style="width: 4%"> -->
-                    <ul class="collapse"><!-- collapse class for collapse the drop down -->
-                        <!-- website title - Logo class -->
-                        <li class="title">
-                            <a>  <span>J</span>OALLY ARREGLOS FRUTALES<span></span></a>
-                        </li>
-                        <li><a href="PrincipalArreglos.php">ARREGLOS</a>
-                        </li>
+                <nav class="flat-mega-menu">
+                    <label for="mobile-button"> <i class="fa fa-bars"></i></label>
+                    <input id="mobile-button" type="checkbox">
+                    <ul class="collapse">
+                        <li class="title"><a><span>J</span>OALLY ARREGLOS FRUTALES<span></span></a></li>
+                        <li><a href="PrincipalArreglos.php">ARREGLOS</a></li>
                         <li><a href="MiCuenta.php">MI CUENTA</a></li>
-                        
                         <li> <a href="MisPedidos.php">MIS PEDIDOS</a>
-                            
                         <li class="login-form " ><!-- login form -->
                             <i class="fa fa-user " style="font-size: 22px;margin-top: 20px"></i>
                             <ul class="drop-down hover-expand" id="cerrar">
-                                <li style="background: #FFFFFF !important">
-                                    <a href="logout.php" style="font-size: 14px; background: #FFFFFF !important; color: #000000">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
+                                <li >
+                                    <a href="logout.php" style="font-size: 14px;">Cerrar Sesión <br><?php echo isset($error) ? utf8_decode($error) : ''; ?></a> 
                                 </li>
                             </ul>
                         </li>
@@ -79,7 +54,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- Main Nav -->
             </header>
             
             

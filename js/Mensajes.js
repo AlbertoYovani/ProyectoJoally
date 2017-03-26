@@ -7,8 +7,8 @@ var msj_loading=function () {
                     '<div>'+
                 '</div>',
         size:'small'
-    })
-}
+    });
+};
 var TotalArreglos=function () {
     $.ajax({
         url: "controlador/Arreglos.php",
@@ -23,7 +23,7 @@ var TotalArreglos=function () {
             console.log(e)
             msj_error_serve();
         }
-    })
+    });
 }
 var msj_error_noti=function (msj){
         Messenger().post({
@@ -31,19 +31,19 @@ var msj_error_noti=function (msj){
             type: 'error',
             showCloseButton: true
         }); 
-    }
+    };
     var msj_error_serve=function (error){
         Messenger().post({
             message: 'Error al procesar la petición al servidor ',
             type: 'error',
             showCloseButton: true
         }); 
-        (error==undefined ? '' :  console.log(error))
-    }
+        (error===undefined ? '' :  console.log(error));
+    };
     var  msj_success_noti=function (msj){
         Messenger().post({
             message: msj,
             showCloseButton: true
         }); 
-    }
+    };
     $('.tip').tooltip();
