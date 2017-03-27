@@ -137,11 +137,11 @@ $(document).ready(function(){
             dataType:'json',
             data:{
             pedidos_id:pedidos_id,
-            accion:'ObtenerDedicatoria',    
+            accion:'ObtenerDedicatoria'    
             }, beforeSend: function (xhr) {
                 msj_loading();
             }, success: function (data,textStatus, jqXHR) {
-                if(data.accion=='1'){
+                if(data.accion==='1'){
                     bootbox.hideAll();
                     bootbox.dialog({
                     title:'Mi tarjeta tiene que decir',
@@ -169,7 +169,7 @@ $(document).ready(function(){
 
                                             },success: function (data, textStatus, jqXHR) {
                                                bootbox.hideAll();
-                                                if(data.accion=='1'){
+                                                if(data.accion==='1'){
                                                     msj_success_noti('Dedicatoria agregada');
                                                     $('.table-pedidos tbody').html("<tr >"+
                                                                                 "<td colspan='7'>"+

@@ -19,8 +19,8 @@ $(document).ready(function(){
             }
             //para cerrar la ventan de pedidos con la tecla Esc
             ,onEscape:function(){}
-        })
-    })
-})
+        });
+    });
+});
 
 

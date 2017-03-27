@@ -31,33 +31,33 @@ $(document).ready(function (){
                                     data:{
                                         usuario:usuario,
                                         ClPassword1:ClPassword1,
-                                        accion:'InisioSesion',
+                                        accion:'InisioSesion'
                                     },beforeSend: function (xhr) {
                                       msj_loading();
                                     },success: function (data, textStatus, jqXHR) {
-                                        if(data.accion=='1'){
+                                        if(data.accion==='1'){
                                             bootbox.hideAll();
                                             alert("Bienvenido");
                                             location.href= 'PrincipalArreglos.php';
-                                        }if(data.accion='2'){ 
+                                        }if(data.accion==='2'){ 
                                             alert("Usuario y/o Contraseña no existess");
                                             //$('.login-error').html('El Usuario y/o Contraseña no existe');
                                         }
                                 },error: function (e) {
-                                    console.log(usuario)
-                                    console.log(ClPassword1)
-                                    console.log(e)
+                                    console.log(usuario);
+                                    console.log(ClPassword1);
+                                    console.log(e);
                                     msj_error_serve();
                                 }
-                            })
+                            });
                         }
                     }
                 }
             //para cerrar la ventan de pedidos con la tecla Esc
             ,onEscape:function(){}
         });
-    })
-})
+    });
+});
 
 
 

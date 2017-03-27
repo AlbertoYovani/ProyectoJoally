@@ -36,48 +36,26 @@
                                                 ?>
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-user color-white"></i>
-                                                    </span>
-                                                    <input class="form-control"  value="<?=$res['nombre']?>" placeholder="Nombre Completo" name="nombre" type="text" required="" pattern="[a-zA-Z-\s]{1,30}" maxlength="40">
+                                                    Nombre: <input style="background: #ffffff; border: none;" value="<?=$res['nombre']?>" data-nombre="<?=$res['nombre']?>" type="text" name="nombre">
                                                     <!--<span class="input-group-addon back-vt">
                                                     </span> --> <!-- está parte agrega una orilla de color rojo -->
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-envelope color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" value="<?=$res['correo']?>" placeholder="ejemplo@hotmail.com" name="correo" type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                                                    E-mail: <input style="background: #ffffff; border: none;" value="<?=$res['correo']?>" data-correo="<?=$res['correo']?>" type="email" name="correo">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-phone color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" value="<?=$res['telefono']?>" placeholder="961 168 86 97" name="telefono" type="text" required="" maxlength="12" pattern="[0-9]{10,12}">
+                                                    Telefono Celular: <input style="background: #ffffff; border: none" disabled="true" value="<?=$res['telefono']?>" type="text">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="input-group">
-                                                    <span class="input-group-addon back-vt">               
-                                                        <i class="fa fa-birthday-cake color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" value="<?=$res['fechanac']?>" placeholder="Fecha de Nacimiento" name="fechanac" type="date" required="">
+                                                    Fecha de Nacimiento: <input style="background: #ffffff; border: none;" disabled="true" value="<?=$res['fechanac']?>" type="date">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-user-secret color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" value="<?=$res['usuario']?>" placeholder="Usuario" name="usuario" type="text" required="" maxlength="20" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]{5,20}">
-                                                </div>
-                                                <br>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon back-vt">
-                                                        <i class="fa fa-unlock-alt color-white"></i>
-                                                    </span>
-                                                    <input class="form-control" placeholder="Contraseña" name="ClPassword" type="password" >
+                                                   Nombre de Usuario: <input <input style="background: #ffffff; border: none;" disabled="true" value="<?=$res['usuario']?>" type="text">
                                                 </div>
                                                 <br>
                                                 <div class="input-group">
@@ -91,7 +69,7 @@
                                         <div class="row">
                                         <div class="col-md-3">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="submit" name="registrar">Guardar Cambios</button>
+                                                <button class="btn btn-primary editardatos" type="button">Editar Datos</button>
                                             </span>
                                         </div>
                                     </div>   
